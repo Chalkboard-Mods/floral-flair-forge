@@ -9,7 +9,6 @@ import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -30,8 +29,6 @@ public class FloralGeneration {
             if (DataUtil.matchesKeys(biome, Biomes.FLOWER_FOREST)) {
                 generation.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FAIRY_BLOSSOM);
             }
-        } else if (DataUtil.matchesKeys(biome, Biomes.SOUL_SAND_VALLEY)) {
-            generation.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_WITHER_ROSE);
         }
     }
 }
