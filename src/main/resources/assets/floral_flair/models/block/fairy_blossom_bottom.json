@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "floral_flair:block/fairy_blossom_bottom"
+  }
+}

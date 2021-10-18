@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All rights reserved"
+
+[[mods]]
+modId="floral_flair"
+version="${file.jarVersion}"
+displayName="Floral Flair"
+logoFile="examplemod.png"
+description='''
+Flower Mod WIP
+'''
+[[dependencies.floral_flair]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.floral_flair]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.floral_flair]]
+    modId = "abnormals_core"
+    mandatory = true
+    versionRange = "[1.16.5-3.3.0,)"
+    ordering = "BEFORE"
+    side = "BOTH"

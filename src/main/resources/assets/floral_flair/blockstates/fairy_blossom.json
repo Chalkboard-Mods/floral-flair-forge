@@ -1,0 +1,7 @@
+
+{
+  "variants": {
+    "half=lower": { "model": "floral_flair:block/fairy_blossom_bottom" },
+    "half=upper":    { "model": "floral_flair:block/fairy_blossom_top" }
+  }
+}

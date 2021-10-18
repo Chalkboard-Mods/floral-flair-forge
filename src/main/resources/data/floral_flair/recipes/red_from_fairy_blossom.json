@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "floral_flair:fairy_blossom"
+        }
+    ],
+    "result": {
+        "item": "minecraft:red_dye",
+        "count": 2
+    }
+}
