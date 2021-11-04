@@ -6,7 +6,7 @@ license="Apache-2.0"
 modId="floral_flair"
 version="1.0"
 displayName="Floral Flair"
-logoFile="examplemod.png"
+logoFile="floral.png"
 description='''
 A mod that adds lovely new flowers to your minecraft world!
 '''
