@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.0.1'
+version = '1.0'
 group = 'chalkboardmods.floralflair'
 archivesBaseName = 'floral_flair'
 
@@ -89,7 +89,7 @@ jar {
             "Specification-Vendor": "Chalkboard Mods",
             "Specification-Version": "1",
             "Implementation-Title": "Floral Flair",
-            "Implementation-Version": "1.16.5-0.0l1",
+            "Implementation-Version": "1.16.5-1.0.0",
             "Implementation-Vendor" :"Chalkboard Mods",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
