@@ -2,10 +2,8 @@ package chalkboardmods.floralflair.core.registry;
 
 import chalkboardmods.floralflair.core.FloralFlair;
 import com.minecraftabnormals.abnormals_core.common.blocks.AbnormalsFlowerBlock;
-import com.minecraftabnormals.abnormals_core.common.blocks.AbnormalsStairsBlock;
 import com.minecraftabnormals.abnormals_core.common.blocks.AbnormalsTallFlowerBlock;
 import com.minecraftabnormals.abnormals_core.core.util.registry.BlockSubRegistryHelper;
-import com.minecraftabnormals.abnormals_core.core.util.registry.RegistryHelper;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;

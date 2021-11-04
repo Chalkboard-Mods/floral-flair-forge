@@ -1,7 +1,6 @@
 package chalkboardmods.floralflair.core.registry;
 
 import chalkboardmods.floralflair.core.FloralFlair;
-import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
