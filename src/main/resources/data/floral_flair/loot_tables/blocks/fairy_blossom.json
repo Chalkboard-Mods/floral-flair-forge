@@ -12,6 +12,15 @@
             "conditions": [
                 {
                     "condition": "minecraft:survives_explosion"
+                },
+                {
+                    "condition": {
+                        "condition": "minecraft:block_state_property",
+                        "block": "floral_flair:fairy_blossom",
+                        "properties": {
+                            "half": "lower"
+                        }
+                    }
                 }
             ]
         }
