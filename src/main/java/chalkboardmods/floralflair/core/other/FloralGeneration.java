@@ -2,11 +2,11 @@ package chalkboardmods.floralflair.core.other;
 
 import chalkboardmods.floralflair.core.FloralFlair;
 import chalkboardmods.floralflair.core.registry.FloralFeatures;
-import com.minecraftabnormals.abnormals_core.core.util.DataUtil;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biomes;
-import net.minecraft.world.gen.GenerationStage;
+import com.teamabnormals.blueprint.core.util.DataUtil;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,14 +20,14 @@ public class FloralGeneration {
         ResourceLocation biome = event.getName();
         BiomeGenerationSettingsBuilder generation = event.getGeneration();
 
-        if (event.getCategory() == Biome.Category.TAIGA && !biome.toString().contains("snowy")) {
-            generation.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FOXNIP);
-        } else if (event.getCategory() == Biome.Category.TAIGA && biome.toString().contains("snowy")) {
-            generation.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FROSTED_FOXNIP);
-        } else if (event.getCategory() == Biome.Category.FOREST) {
-            generation.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_PULSE_PETAL);
+        if (event.getCategory() == Biome.BiomeCategory.TAIGA && !biome.toString().contains("snowy")) {
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FOXNIP);
+        } else if (event.getCategory() == Biome.BiomeCategory.TAIGA && biome.toString().contains("snowy")) {
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FROSTED_FOXNIP);
+        } else if (event.getCategory() == Biome.BiomeCategory.FOREST) {
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_PULSE_PETAL);
             if (DataUtil.matchesKeys(biome, Biomes.FLOWER_FOREST)) {
-                generation.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FAIRY_BLOSSOM);
+                generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FAIRY_BLOSSOM);
             }
         }
     }

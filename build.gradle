@@ -1,27 +1,24 @@
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
-        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'maven-publish'
-apply plugin: 'org.spongepowered.mixin'
 
 version = project.version
 group = 'chalkboardmods.floralflair'
 archivesBaseName = 'Floral-Flair'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(8)
+java.toolchain.languageVersion = JavaLanguageVersion.of(16)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'official', version: '1.16.5'
+    mappings channel: 'official', version: '1.17.1'
     runs {
         client {
             workingDirectory project.file('run')
@@ -39,7 +36,6 @@ minecraft {
 
         server {
             workingDirectory project.file('run')
-
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
             property 'mixin.env.remapRefMap', 'true'
@@ -57,6 +53,7 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
 
+
             args '--mod', 'floral_flair', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
@@ -71,43 +68,27 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-maven {
-url = "https://maven.jaackson.me"
-   }
+    maven {
+        url = "https://maven.jaackson.me"
+    }
 }
 
-
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.0'
-    implementation fg.deobf("com.minecraftabnormals:abnormals-core:1.16.5-3.3.0")
+    minecraft 'net.minecraftforge:forge:1.17.1-37.0.104'
 
+    implementation fg.deobf("com.teamabnormals:blueprint:1.17.1-4.0.1")
 }
 
 jar {
     manifest {
         attributes([
-            "Specification-Title": "Floral Flair",
-            "Specification-Vendor": "Chalkboard Mods",
-            "Specification-Version": "1",
-            "Implementation-Title": "Floral Flair",
-            "Implementation-Version": project.version,
-            "Implementation-Vendor" :"Chalkboard Mods",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Specification-Title"     : "Floral Flair",
+                "Specification-Vendor"    : "Chalkboard Mods",
+                "Specification-Version"   : "1",
+                "Implementation-Title"    : "Floral Flair",
+                "Implementation-Version"  : project.version,
+                "Implementation-Vendor"   : "Chalkboard Mods",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
-    }
-}
-
-jar.finalizedBy('reobfJar') 
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifact jar
-        }
-    }
-    repositories {
-        maven {
-            url "file:///${project.projectDir}/mcmodsrepo"
-        }
     }
 }
