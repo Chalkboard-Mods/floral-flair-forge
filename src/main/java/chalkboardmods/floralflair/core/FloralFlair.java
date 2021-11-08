@@ -3,7 +3,9 @@ package chalkboardmods.floralflair.core;
 import com.teamabnormals.blueprint.core.util.registry.RegistryHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,6 +19,8 @@ public class FloralFlair {
     public FloralFlair() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         REGISTRY_HELPER.register(bus);
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, FloralConfig.SPEC, "floral_flair-common.toml");
 
         MinecraftForge.EVENT_BUS.register(this);
     }

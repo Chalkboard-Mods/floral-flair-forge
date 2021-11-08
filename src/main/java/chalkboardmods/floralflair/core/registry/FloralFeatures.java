@@ -1,5 +1,6 @@
 package chalkboardmods.floralflair.core.registry;
 
+import chalkboardmods.floralflair.core.FloralConfig;
 import chalkboardmods.floralflair.core.FloralFlair;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
@@ -28,10 +29,10 @@ public class FloralFeatures {
 
     public static final class Configured {
 
-        public static final ConfiguredFeature<?, ?> FLOWER_FOXNIP = register("flower_foxnip", Feature.FLOWER.configured(Configs.FOXNIP_CONFIG).decorated(Features.Decorators.ADD_32).decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(3));
-        public static final ConfiguredFeature<?, ?> FLOWER_FROSTED_FOXNIP = register("flower_frosted_foxnip", Feature.FLOWER.configured(Configs.FROSTED_FOXNIP_CONFIG).decorated(Features.Decorators.ADD_32).decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(3));
-        public static final ConfiguredFeature<?, ?> FLOWER_PULSE_PETAL = register("flower_pulse_petal", Feature.FLOWER.configured(Configs.PULSE_PETAL_CONFIG).decorated(Features.Decorators.ADD_32).decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(3));
-        public static final ConfiguredFeature<?, ?> FLOWER_FAIRY_BLOSSOM = register("flower_fairy_blossom", Feature.RANDOM_PATCH.configured(Configs.FAIRY_BLOSSOM_CONFIG).decorated(Features.Decorators.HEIGHTMAP_DOUBLE_SQUARE).count(8));
+        public static final ConfiguredFeature<?, ?> FLOWER_FOXNIP = register("flower_foxnip", Feature.FLOWER.configured(Configs.FOXNIP_CONFIG).decorated(Features.Decorators.ADD_32).decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(FloralConfig.foxnipDensity.get()));
+        public static final ConfiguredFeature<?, ?> FLOWER_FROSTED_FOXNIP = register("flower_frosted_foxnip", Feature.FLOWER.configured(Configs.FROSTED_FOXNIP_CONFIG).decorated(Features.Decorators.ADD_32).decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(FloralConfig.foxnipDensity.get()));
+        public static final ConfiguredFeature<?, ?> FLOWER_PULSE_PETAL = register("flower_pulse_petal", Feature.FLOWER.configured(Configs.PULSE_PETAL_CONFIG).decorated(Features.Decorators.ADD_32).decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(FloralConfig.pulsePetalDensity.get()));
+        public static final ConfiguredFeature<?, ?> FLOWER_FAIRY_BLOSSOM = register("flower_fairy_blossom", Feature.RANDOM_PATCH.configured(Configs.FAIRY_BLOSSOM_CONFIG).decorated(Features.Decorators.HEIGHTMAP_DOUBLE_SQUARE).count(FloralConfig.fairyBlossomDensity.get()));
 
 
 
