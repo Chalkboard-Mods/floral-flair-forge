@@ -33,5 +33,8 @@ public class FloralGeneration {
                 generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FAIRY_BLOSSOM);
             }
         }
+        else if (event.getCategory() == Biome.BiomeCategory.JUNGLE && FloralConfig.jungleGemDensity.get() != 0) {
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_JUNGLE_GEM);
+        }
     }
 }

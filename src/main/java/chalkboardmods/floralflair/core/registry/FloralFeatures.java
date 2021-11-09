@@ -24,6 +24,8 @@ public class FloralFeatures {
         public static final RandomPatchConfiguration FROSTED_FOXNIP_CONFIG = (new RandomPatchConfiguration.GrassConfigurationBuilder(new SimpleStateProvider(FloralBlocks.FROSTED_FOXNIP.get().defaultBlockState()),new SimpleBlockPlacer())).tries(32).build();
         public static final RandomPatchConfiguration PULSE_PETAL_CONFIG = (new RandomPatchConfiguration.GrassConfigurationBuilder(new SimpleStateProvider(FloralBlocks.PULSE_PETAL.get().defaultBlockState()),new SimpleBlockPlacer())).tries(32).build();
         public static final RandomPatchConfiguration FAIRY_BLOSSOM_CONFIG = (new RandomPatchConfiguration.GrassConfigurationBuilder(new SimpleStateProvider(FloralBlocks.FAIRY_BLOSSOM.get().defaultBlockState()),new DoublePlantPlacer())).tries(64).noProjection().build();
+        public static final RandomPatchConfiguration JUNGLE_GEM_CONFIG = (new RandomPatchConfiguration.GrassConfigurationBuilder(new SimpleStateProvider(FloralBlocks.JUNGLE_GEM.get().defaultBlockState()),new SimpleBlockPlacer())).tries(32).build();
+
 
     }
 
@@ -33,6 +35,8 @@ public class FloralFeatures {
         public static final ConfiguredFeature<?, ?> FLOWER_FROSTED_FOXNIP = register("flower_frosted_foxnip", Feature.FLOWER.configured(Configs.FROSTED_FOXNIP_CONFIG).decorated(Features.Decorators.ADD_32).decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(FloralConfig.foxnipDensity.get()));
         public static final ConfiguredFeature<?, ?> FLOWER_PULSE_PETAL = register("flower_pulse_petal", Feature.FLOWER.configured(Configs.PULSE_PETAL_CONFIG).decorated(Features.Decorators.ADD_32).decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(FloralConfig.pulsePetalDensity.get()));
         public static final ConfiguredFeature<?, ?> FLOWER_FAIRY_BLOSSOM = register("flower_fairy_blossom", Feature.RANDOM_PATCH.configured(Configs.FAIRY_BLOSSOM_CONFIG).decorated(Features.Decorators.HEIGHTMAP_DOUBLE_SQUARE).count(FloralConfig.fairyBlossomDensity.get()));
+        public static final ConfiguredFeature<?, ?> FLOWER_JUNGLE_GEM = register("flower_jungle_gem", Feature.FLOWER.configured(Configs.JUNGLE_GEM_CONFIG).decorated(Features.Decorators.ADD_32).decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(FloralConfig.jungleGemDensity.get()));
+
 
 
 

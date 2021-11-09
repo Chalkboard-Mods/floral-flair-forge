@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cross",
+    "textures": {
+      "cross": "floral_flair:block/gem_of_the_jungle"
+    }
+}

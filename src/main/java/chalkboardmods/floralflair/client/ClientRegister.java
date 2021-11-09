@@ -20,10 +20,12 @@ public class ClientRegister {
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.FROSTED_FOXNIP.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.PULSE_PETAL.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.FAIRY_BLOSSOM.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.JUNGLE_GEM.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_FOXNIP.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_FROSTED_FOXNIP.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_PULSE_PETAL.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_JUNGLE_GEM.get(), RenderType.cutout());
 
 
 
