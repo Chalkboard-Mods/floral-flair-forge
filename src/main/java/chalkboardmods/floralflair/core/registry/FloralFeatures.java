@@ -25,6 +25,10 @@ public class FloralFeatures {
         public static final RandomPatchConfiguration PULSE_PETAL_CONFIG = (new RandomPatchConfiguration.GrassConfigurationBuilder(new SimpleStateProvider(FloralBlocks.PULSE_PETAL.get().defaultBlockState()),new SimpleBlockPlacer())).tries(32).build();
         public static final RandomPatchConfiguration FAIRY_BLOSSOM_CONFIG = (new RandomPatchConfiguration.GrassConfigurationBuilder(new SimpleStateProvider(FloralBlocks.FAIRY_BLOSSOM.get().defaultBlockState()),new DoublePlantPlacer())).tries(64).noProjection().build();
         public static final RandomPatchConfiguration JUNGLE_GEM_CONFIG = (new RandomPatchConfiguration.GrassConfigurationBuilder(new SimpleStateProvider(FloralBlocks.JUNGLE_GEM.get().defaultBlockState()),new SimpleBlockPlacer())).tries(32).build();
+        public static final RandomPatchConfiguration ROSE_CONFIG = (new RandomPatchConfiguration.GrassConfigurationBuilder(new SimpleStateProvider(FloralBlocks.ROSE.get().defaultBlockState()),new SimpleBlockPlacer())).tries(32).build();
+        public static final RandomPatchConfiguration SUNSET_POPPY_CONFIG = (new RandomPatchConfiguration.GrassConfigurationBuilder(new SimpleStateProvider(FloralBlocks.SUNSET_POPPY.get().defaultBlockState()),new SimpleBlockPlacer())).tries(32).build();
+        public static final RandomPatchConfiguration MUSCARI_CONFIG = (new RandomPatchConfiguration.GrassConfigurationBuilder(new SimpleStateProvider(FloralBlocks.MUSCARI.get().defaultBlockState()),new DoublePlantPlacer())).tries(64).noProjection().build();
+
 
 
     }
@@ -36,6 +40,13 @@ public class FloralFeatures {
         public static final ConfiguredFeature<?, ?> FLOWER_PULSE_PETAL = register("flower_pulse_petal", Feature.FLOWER.configured(Configs.PULSE_PETAL_CONFIG).decorated(Features.Decorators.ADD_32).decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(FloralConfig.pulsePetalDensity.get()));
         public static final ConfiguredFeature<?, ?> FLOWER_FAIRY_BLOSSOM = register("flower_fairy_blossom", Feature.RANDOM_PATCH.configured(Configs.FAIRY_BLOSSOM_CONFIG).decorated(Features.Decorators.HEIGHTMAP_DOUBLE_SQUARE).count(FloralConfig.fairyBlossomDensity.get()));
         public static final ConfiguredFeature<?, ?> FLOWER_JUNGLE_GEM = register("flower_jungle_gem", Feature.FLOWER.configured(Configs.JUNGLE_GEM_CONFIG).decorated(Features.Decorators.ADD_32).decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(FloralConfig.jungleGemDensity.get()));
+        public static final ConfiguredFeature<?, ?> FLOWER_ROSE = register("flower_rose", Feature.FLOWER.configured(Configs.ROSE_CONFIG).decorated(Features.Decorators.ADD_32).decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(FloralConfig.roseDensity.get()));
+        public static final ConfiguredFeature<?, ?> FLOWER_SUNSET_POPPY = register("flower_sunset_poppy", Feature.FLOWER.configured(Configs.SUNSET_POPPY_CONFIG).decorated(Features.Decorators.ADD_32).decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(FloralConfig.sunsetPoppyDensity.get()));
+        public static final ConfiguredFeature<?, ?> FLOWER_MUSCARI = register("flower_muscari", Feature.RANDOM_PATCH.configured(Configs.MUSCARI_CONFIG).decorated(Features.Decorators.HEIGHTMAP_DOUBLE_SQUARE).count(FloralConfig.muscariDensity.get()));
+
+
+
+
 
 
 

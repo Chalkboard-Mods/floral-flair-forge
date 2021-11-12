@@ -24,8 +24,8 @@ public class FloralGeneration {
         if (event.getCategory() == Biome.BiomeCategory.TAIGA && !biome.toString().contains("snowy") && FloralConfig.foxnipDensity.get() != 0) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FOXNIP);
         } else if (event.getCategory() == Biome.BiomeCategory.TAIGA && biome.toString().contains("snowy") && FloralConfig.foxnipDensity.get() != 0) {
-            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FROSTED_FOXNIP);
-        } else if (event.getCategory() == Biome.BiomeCategory.FOREST) {
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FROSTED_FOXNIP);}
+        if (event.getCategory() == Biome.BiomeCategory.FOREST) {
             if (FloralConfig.pulsePetalDensity.get() != 0) {
                 generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_PULSE_PETAL);
             }
@@ -33,8 +33,20 @@ public class FloralGeneration {
                 generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FAIRY_BLOSSOM);
             }
         }
-        else if (event.getCategory() == Biome.BiomeCategory.JUNGLE && FloralConfig.jungleGemDensity.get() != 0) {
+        if (event.getCategory() == Biome.BiomeCategory.JUNGLE && FloralConfig.jungleGemDensity.get() != 0) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_JUNGLE_GEM);
+        }
+
+        if (biome.toString().contains("snowy") && FloralConfig.muscariDensity.get() != 0) {
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_MUSCARI);
+        }
+
+        if (DataUtil.matchesKeys(biome, Biomes.SUNFLOWER_PLAINS) && FloralConfig.sunsetPoppyDensity.get() != 0) {
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_SUNSET_POPPY);
+        }
+
+        if ((event.getCategory() == Biome.BiomeCategory.FOREST || event.getCategory() == Biome.BiomeCategory.PLAINS) && FloralConfig.roseDensity.get() != 0) {
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_ROSE);
         }
     }
 }

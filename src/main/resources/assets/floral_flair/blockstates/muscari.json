@@ -1,0 +1,7 @@
+
+{
+  "variants": {
+    "half=lower": { "model": "floral_flair:block/muscari_bottom" },
+    "half=upper":    { "model": "floral_flair:block/muscari_top" }
+  }
+}
