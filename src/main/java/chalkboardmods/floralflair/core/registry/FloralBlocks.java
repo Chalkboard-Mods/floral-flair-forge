@@ -33,7 +33,7 @@ public class FloralBlocks {
     public static final RegistryObject<Block> POTTED_PULSE_PETAL = HELPER.createBlockNoItem("potted_pulse_petal", () -> new FlowerPotBlock(PULSE_PETAL.get(), Properties.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_JUNGLE_GEM = HELPER.createBlockNoItem("potted_gem_of_the_jungle", () -> new FlowerPotBlock(JUNGLE_GEM.get(), Properties.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_ROSE = HELPER.createBlockNoItem("potted_rose", () -> new FlowerPotBlock(ROSE.get(), Properties.FLOWER_POT));
-    public static final RegistryObject<Block> POTTED_SUNSET_POPPY = HELPER.createBlockNoItem("potted_sunset_poppy", () -> new FlowerPotBlock(ROSE.get(), Properties.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_SUNSET_POPPY = HELPER.createBlockNoItem("potted_sunset_poppy", () -> new FlowerPotBlock(SUNSET_POPPY.get(), Properties.FLOWER_POT));
 
 
 
