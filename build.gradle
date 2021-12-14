@@ -14,11 +14,11 @@ version = project.version
 group = 'chalkboardmods.floralflair'
 archivesBaseName = 'Floral-Flair'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(16)
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'official', version: '1.17.1'
+    mappings channel: 'official', version: '1.18.1'
     runs {
         client {
             workingDirectory project.file('run')
@@ -74,9 +74,9 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.17.1-37.0.104'
+    minecraft 'net.minecraftforge:forge:1.18.1-39.0.0'
 
-    implementation fg.deobf("com.teamabnormals:blueprint:1.17.1-4.0.1")
+    implementation fg.deobf("com.teamabnormals:blueprint:1.18.1-5.0.0")
 }
 
 jar {

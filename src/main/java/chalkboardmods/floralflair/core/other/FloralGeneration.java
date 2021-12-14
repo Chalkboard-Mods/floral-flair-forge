@@ -22,31 +22,31 @@ public class FloralGeneration {
         BiomeGenerationSettingsBuilder generation = event.getGeneration();
 
         if (event.getCategory() == Biome.BiomeCategory.TAIGA && !biome.toString().contains("snowy") && FloralConfig.foxnipDensity.get() != 0) {
-            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FOXNIP);
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.FOXNIP_PLACED);
         } else if (event.getCategory() == Biome.BiomeCategory.TAIGA && biome.toString().contains("snowy") && FloralConfig.foxnipDensity.get() != 0) {
-            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FROSTED_FOXNIP);}
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.FROSTED_FOXNIP_PLACED);}
         if (event.getCategory() == Biome.BiomeCategory.FOREST) {
             if (FloralConfig.pulsePetalDensity.get() != 0) {
-                generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_PULSE_PETAL);
+                generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.PULSE_PLACED);
             }
             if (DataUtil.matchesKeys(biome, Biomes.FLOWER_FOREST) && FloralConfig.fairyBlossomDensity.get() != 0) {
-                generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_FAIRY_BLOSSOM);
+                generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.FAIRY_BLOSSOM_PLACED);
             }
         }
         if (event.getCategory() == Biome.BiomeCategory.JUNGLE && FloralConfig.jungleGemDensity.get() != 0) {
-            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_JUNGLE_GEM);
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.JUNGLE_GEM_PLACED);
         }
 
         if (biome.toString().contains("snowy") && FloralConfig.muscariDensity.get() != 0) {
-            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_MUSCARI);
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.MUSCARI_PLACED);
         }
 
         if (DataUtil.matchesKeys(biome, Biomes.SUNFLOWER_PLAINS) && FloralConfig.sunsetPoppyDensity.get() != 0) {
-            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_SUNSET_POPPY);
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.SUNSET_POPPY_PLACED);
         }
 
         if ((event.getCategory() == Biome.BiomeCategory.FOREST || event.getCategory() == Biome.BiomeCategory.PLAINS) && FloralConfig.roseDensity.get() != 0) {
-            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Configured.FLOWER_ROSE);
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.ROSE_PLACED);
         }
     }
 }
