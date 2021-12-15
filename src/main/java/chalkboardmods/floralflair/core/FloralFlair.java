@@ -20,8 +20,6 @@ public class FloralFlair {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         REGISTRY_HELPER.register(bus);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, FloralConfig.SPEC, "floral_flair-common.toml");
-
         MinecraftForge.EVENT_BUS.register(this);
     }
 }
