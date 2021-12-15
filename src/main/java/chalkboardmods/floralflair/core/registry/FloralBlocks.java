@@ -27,6 +27,7 @@ public class FloralBlocks {
     public static final RegistryObject<Block> ROSE = HELPER.createBlock("rose", () -> new BlueprintFlowerBlock(()-> MobEffects.REGENERATION, 9, BlockBehaviour.Properties.copy(Blocks.POPPY)), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> SUNSET_POPPY = HELPER.createBlock("sunset_poppy", () -> new BlueprintFlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 11, BlockBehaviour.Properties.copy(Blocks.POPPY)), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> MUSCARI = HELPER.createBlock("muscari", () -> new BlueprintTallFlowerBlock(Properties.TALL_FLOWER), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> PURPUREUM = HELPER.createBlock("purpureum", () -> new BlueprintTallFlowerBlock(Properties.TALL_FLOWER), CreativeModeTab.TAB_DECORATIONS);
 
     public static final RegistryObject<Block> POTTED_FOXNIP = HELPER.createBlockNoItem("potted_foxnip", () -> new FlowerPotBlock(FOXNIP.get(), Properties.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_FROSTED_FOXNIP = HELPER.createBlockNoItem("potted_frosted_foxnip", () -> new FlowerPotBlock(FROSTED_FOXNIP.get(), Properties.FLOWER_POT));

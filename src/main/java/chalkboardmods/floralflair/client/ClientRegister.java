@@ -24,6 +24,7 @@ public class ClientRegister {
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.ROSE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.SUNSET_POPPY.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.MUSCARI.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.PURPUREUM.get(), RenderType.cutout());
 
 
 

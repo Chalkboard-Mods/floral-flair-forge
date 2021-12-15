@@ -29,6 +29,8 @@ public class FloralFeatures {
         public static final ConfiguredFeature<?, ?> FLOWER_ROSE = register("flower_rose", Feature.FLOWER.configured(new RandomPatchConfiguration(64, 4, 1, () -> Feature.SIMPLE_BLOCK.configured(new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.ROSE.get()))).onlyWhenEmpty())));
         public static final ConfiguredFeature<?, ?> FLOWER_SUNSET_POPPY = register("flower_sunset_poppy", Feature.FLOWER.configured(new RandomPatchConfiguration(64, 7, 2, () -> Feature.SIMPLE_BLOCK.configured(new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.SUNSET_POPPY.get()))).onlyWhenEmpty())));
         public static final ConfiguredFeature<?, ?> FLOWER_MUSCARI = register("flower_muscari", Feature.RANDOM_PATCH.configured(FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK.configured(new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.MUSCARI.get()))))));
+        public static final ConfiguredFeature<?, ?> FLOWER_PURPUREUM = register("flower_purpureum", Feature.RANDOM_PATCH.configured(FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK.configured(new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.PURPUREUM.get()))))));
+
 
 
 
@@ -45,9 +47,11 @@ public class FloralFeatures {
         public static final PlacedFeature FROSTED_FOXNIP_PLACED = PlacementUtils.register("frosted_foxnip", Configured.FLOWER_FROSTED_FOXNIP.placed(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         public static final PlacedFeature PULSE_PLACED = PlacementUtils.register("pulse_petal", Configured.FLOWER_PULSE_PETAL.placed(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         public static final PlacedFeature FAIRY_BLOSSOM_PLACED = PlacementUtils.register("fairy_blossom", Configured.FLOWER_FAIRY_BLOSSOM.placed(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
-        public static final PlacedFeature JUNGLE_GEM_PLACED = PlacementUtils.register("jungle_gem", Configured.FLOWER_JUNGLE_GEM.placed(RarityFilter.onAverageOnceEvery(18), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        public static final PlacedFeature JUNGLE_GEM_PLACED = PlacementUtils.register("jungle_gem", Configured.FLOWER_JUNGLE_GEM.placed(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         public static final PlacedFeature MUSCARI_PLACED = PlacementUtils.register("muscari", Configured.FLOWER_MUSCARI.placed(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         public static final PlacedFeature SUNSET_POPPY_PLACED = PlacementUtils.register("sunset_poppy", Configured.FLOWER_SUNSET_POPPY.placed(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         public static final PlacedFeature ROSE_PLACED = PlacementUtils.register("rose", Configured.FLOWER_ROSE.placed(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        public static final PlacedFeature PURPUREUM_PLACED = PlacementUtils.register("purpureum", Configured.FLOWER_PURPUREUM.placed(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
     }
 }

@@ -45,5 +45,9 @@ public class FloralGeneration {
         if (DataUtil.matchesKeys(biome, Biomes.MEADOW)) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.ROSE_PLACED);
         }
+
+        if (event.getCategory() == Biome.BiomeCategory.SWAMP) {
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.PURPUREUM_PLACED);
+        }
     }
 }
