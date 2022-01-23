@@ -8,6 +8,7 @@
     "block.floral_flair.sunset_poppy": "Sunset Poppy",
     "block.floral_flair.muscari": "Muscari",
     "block.floral_flair.purpureum": "Purpureum",
+    "block.floral_flair.scilla": "Scilla",
 
 
     "block.floral_flair.potted_foxnip": "Potted Foxnip",
@@ -15,5 +16,6 @@
     "block.floral_flair.potted_pulse_petal": "Potted Pulse Petal",
     "block.floral_flair.potted_gem_of_the_jungle": "Potted Gem of the Jungle",
     "block.floral_flair.potted_rose": "Potted Rose",
-    "block.floral_flair.potted_sunset_poppy": "Potted Sunset Poppy"
+    "block.floral_flair.potted_sunset_poppy": "Potted Sunset Poppy",
+    "block.floral_flair.potted_scilla": "Potted Scilla"
 }

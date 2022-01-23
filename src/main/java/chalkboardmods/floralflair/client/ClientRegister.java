@@ -25,6 +25,7 @@ public class ClientRegister {
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.SUNSET_POPPY.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.MUSCARI.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.PURPUREUM.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.SCILLA.get(), RenderType.cutout());
 
 
 
@@ -34,6 +35,7 @@ public class ClientRegister {
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_JUNGLE_GEM.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_ROSE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_SUNSET_POPPY.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_SCILLA.get(), RenderType.cutout());
 
 
 

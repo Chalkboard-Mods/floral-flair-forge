@@ -23,9 +23,10 @@ public class FloralGeneration {
         if (event.getCategory() == Biome.BiomeCategory.TAIGA && !biome.toString().contains("snowy")) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.FOXNIP_PLACED);
         } else if (event.getCategory() == Biome.BiomeCategory.TAIGA && biome.toString().contains("snowy")) {
-            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.FROSTED_FOXNIP_PLACED);}
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.FROSTED_FOXNIP_PLACED);
+        }
         if (event.getCategory() == Biome.BiomeCategory.FOREST) {
-                generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.PULSE_PLACED);
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.PULSE_PLACED);
             if (DataUtil.matchesKeys(biome, Biomes.FLOWER_FOREST)) {
                 generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.FAIRY_BLOSSOM_PLACED);
             }
@@ -48,6 +49,10 @@ public class FloralGeneration {
 
         if (event.getCategory() == Biome.BiomeCategory.SWAMP) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.PURPUREUM_PLACED);
+        }
+
+        if (DataUtil.matchesKeys(biome, Biomes.GROVE)) {
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.SCILLA_PLACED);
         }
     }
 }

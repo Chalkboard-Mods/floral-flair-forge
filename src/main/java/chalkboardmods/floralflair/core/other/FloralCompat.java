@@ -20,6 +20,7 @@ public class FloralCompat {
         DataUtil.registerCompostable(FloralBlocks.PULSE_PETAL.get(), 0.65f);
         DataUtil.registerCompostable(FloralBlocks.FAIRY_BLOSSOM.get(), 0.65f);
         DataUtil.registerCompostable(FloralBlocks.MUSCARI.get(), 0.65f);
+        DataUtil.registerCompostable(FloralBlocks.SCILLA.get(), 0.65f);
     }
 
     public static void flammability() {
@@ -32,5 +33,6 @@ public class FloralCompat {
         DataUtil.registerFlammable(FloralBlocks.PULSE_PETAL.get(), 60, 100);
         DataUtil.registerFlammable(FloralBlocks.FAIRY_BLOSSOM.get(), 60, 100);
         DataUtil.registerFlammable(FloralBlocks.MUSCARI.get(), 60, 100);
+        DataUtil.registerFlammable(FloralBlocks.SCILLA.get(), 60, 100);
     }
 }
