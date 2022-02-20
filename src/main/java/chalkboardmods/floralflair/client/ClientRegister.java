@@ -26,6 +26,13 @@ public class ClientRegister {
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.MUSCARI.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.PURPUREUM.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.SCILLA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.MIDNIGHT_ORCHID.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.HYACINTH.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.SNOW_FALL_FLOWER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.SPIKED_TULIP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.STONNETE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.LUNULA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.ANTHURIUM.get(), RenderType.cutout());
 
 
 
@@ -36,6 +43,13 @@ public class ClientRegister {
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_ROSE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_SUNSET_POPPY.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_SCILLA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_MIDNIGHT_ORCHID.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_HYACINTH.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_SNOW_FALL_FLOWER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_SPIKED_TULIP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_STONNETE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_LUNULA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_ANTHURIUM.get(), RenderType.cutout());
 
 
 

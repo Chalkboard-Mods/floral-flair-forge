@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "time=0": {
+      "model": "floral_flair:block/lunula"
+    },
+    "time=1": {
+      "model": "floral_flair:block/lunula_open_0"
+    },
+    "time=2": {
+      "model": "floral_flair:block/lunula_open_1"
+    },
+    "time=3": {
+      "model": "floral_flair:block/lunula_open_2"
+    }
+  }
+}

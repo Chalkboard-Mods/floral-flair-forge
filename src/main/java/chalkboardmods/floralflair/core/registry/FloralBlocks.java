@@ -31,6 +31,14 @@ public class FloralBlocks {
     public static final RegistryObject<Block> MUSCARI = HELPER.createBlock("muscari", () -> new BlueprintTallFlowerBlock(PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> PURPUREUM = HELPER.createBlock("purpureum", () -> new BlueprintTallFlowerBlock(PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> SCILLA = HELPER.createBlock("scilla", () -> new ScillaFlowerBlock(() -> MobEffects.WEAKNESS, 6, PropertyUtil.FLOWER),CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> MIDNIGHT_ORCHID = HELPER.createBlock("midnight_orchid", () -> new BlueprintFlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 11, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> HYACINTH = HELPER.createBlock("hyacinth", () -> new BlueprintFlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 11, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> SNOW_FALL_FLOWER = HELPER.createBlock("snow_fall_flower", () -> new BlueprintFlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 11, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> SPIKED_TULIP = HELPER.createBlock("spiked_tulip", () -> new BlueprintFlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 11, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> STONNETE = HELPER.createBlock("stonnete", () -> new BlueprintFlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 11, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> LUNULA = HELPER.createBlock("lunula", () -> new BlueprintFlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 11, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> ANTHURIUM = HELPER.createBlock("anthurium", () -> new BlueprintFlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 11, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
+
 
     public static final RegistryObject<Block> POTTED_FOXNIP = HELPER.createBlockNoItem("potted_foxnip", () -> new FlowerPotBlock(FOXNIP.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_FROSTED_FOXNIP = HELPER.createBlockNoItem("potted_frosted_foxnip", () -> new FlowerPotBlock(FROSTED_FOXNIP.get(), PropertyUtil.FLOWER_POT));
@@ -39,4 +47,11 @@ public class FloralBlocks {
     public static final RegistryObject<Block> POTTED_ROSE = HELPER.createBlockNoItem("potted_rose", () -> new FlowerPotBlock(ROSE.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_SUNSET_POPPY = HELPER.createBlockNoItem("potted_sunset_poppy", () -> new FlowerPotBlock(SUNSET_POPPY.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_SCILLA = HELPER.createBlockNoItem("potted_scilla", () -> new FlowerPotBlock(SCILLA.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_MIDNIGHT_ORCHID = HELPER.createBlockNoItem("potted_midnight_orchid", () -> new FlowerPotBlock(MIDNIGHT_ORCHID.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_HYACINTH = HELPER.createBlockNoItem("potted_hyacinth", () -> new FlowerPotBlock(HYACINTH.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_SNOW_FALL_FLOWER = HELPER.createBlockNoItem("potted_snow_fall_flower", () -> new FlowerPotBlock(SNOW_FALL_FLOWER.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_SPIKED_TULIP = HELPER.createBlockNoItem("potted_spiked_tulip", () -> new FlowerPotBlock(SPIKED_TULIP.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_STONNETE = HELPER.createBlockNoItem("potted_stonnete", () -> new FlowerPotBlock(STONNETE.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_LUNULA = HELPER.createBlockNoItem("potted_lunula", () -> new FlowerPotBlock(LUNULA.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_ANTHURIUM = HELPER.createBlockNoItem("potted_anthurium", () -> new FlowerPotBlock(ANTHURIUM.get(), PropertyUtil.FLOWER_POT));
 }
