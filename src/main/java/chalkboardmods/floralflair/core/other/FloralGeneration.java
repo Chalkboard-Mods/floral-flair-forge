@@ -27,8 +27,10 @@ public class FloralGeneration {
         }
         if (event.getCategory() == Biome.BiomeCategory.FOREST) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.PULSE_PLACED);
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.ANTHURIUM_PLACED);
             if (DataUtil.matchesKeys(biome, Biomes.FLOWER_FOREST)) {
                 generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.FAIRY_BLOSSOM_PLACED);
+                generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.HYACINTH_PLACED);
             }
         }
         if (event.getCategory() == Biome.BiomeCategory.JUNGLE) {
@@ -37,18 +39,27 @@ public class FloralGeneration {
 
         if (biome.toString().contains("snowy")) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.MUSCARI_PLACED);
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.SNOW_FALL_FLOWER_PLACED);
         }
 
         if (event.getCategory() == Biome.BiomeCategory.SAVANNA) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.SUNSET_POPPY_PLACED);
         }
+        if (event.getCategory() == Biome.BiomeCategory.UNDERGROUND) {
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.STONNETE_PLACED);
+        }
+        if (biome.toString().contains("dripstone")) {
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.SPIKED_TULIP_PLACED);
 
+        }
         if (DataUtil.matchesKeys(biome, Biomes.MEADOW)) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.ROSE_PLACED);
         }
 
         if (event.getCategory() == Biome.BiomeCategory.SWAMP) {
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.MIDNIGHT_ORCHID_PLACED);
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.PURPUREUM_PLACED);
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.LUNULA_PLACED);
         }
 
         if (DataUtil.matchesKeys(biome, Biomes.GROVE)) {
