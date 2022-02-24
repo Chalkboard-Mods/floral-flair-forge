@@ -21,10 +21,11 @@ public class FloralGeneration {
         ResourceLocation biome = event.getName();
         BiomeGenerationSettingsBuilder generation = event.getGeneration();
 
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.STONNETE_PLACED);
+
         if (event.getCategory() == Biome.BiomeCategory.TAIGA && !biome.toString().contains("snowy")) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.FOXNIP_PLACED);
-        }
-        else if (event.getCategory() == Biome.BiomeCategory.TAIGA && biome.toString().contains("snowy")) {
+        } else if (event.getCategory() == Biome.BiomeCategory.TAIGA && biome.toString().contains("snowy")) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.FROSTED_FOXNIP_PLACED);
         }
         if (event.getCategory() == Biome.BiomeCategory.FOREST) {
@@ -48,11 +49,8 @@ public class FloralGeneration {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.SUNSET_POPPY_PLACED);
         }
 
-        if (event.getCategory() == Biome.BiomeCategory.UNDERGROUND) {
-            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.STONNETE_PLACED);
-            if (DataUtil.matchesKeys(biome, Biomes.DRIPSTONE_CAVES)) {
-                generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.SPIKED_TULIP_PLACED);
-            }
+        if (DataUtil.matchesKeys(biome, Biomes.DRIPSTONE_CAVES)) {
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.SPIKED_TULIP_PLACED);
         }
 
         if (DataUtil.matchesKeys(biome, Biomes.MEADOW)) {

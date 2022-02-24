@@ -2,17 +2,13 @@ package chalkboardmods.floralflair.core.registry;
 
 import chalkboardmods.floralflair.core.FloralFlair;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Registry;
-import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
@@ -60,11 +56,9 @@ public class FloralFeatures {
         public static final PlacedFeature MIDNIGHT_ORCHID_PLACED = PlacementUtils.register("midnight_orchid", Configured.FLOWER_MIDNIGHT_ORCHID.placed(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         public static final PlacedFeature HYACINTH_PLACED = PlacementUtils.register("hyacinth", Configured.FLOWER_HYACINTH.placed(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         public static final PlacedFeature SNOW_FALL_FLOWER_PLACED = PlacementUtils.register("snow_fall_flower", Configured.FLOWER_SNOW_FALL_FLOWER.placed(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
-        public static final PlacedFeature SPIKED_TULIP_PLACED = PlacementUtils.register("spiked_tulip", Configured.FLOWER_SPIKED_TULIP.placed(RarityFilter.onAverageOnceEvery(64), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome()));
-        public static final PlacedFeature STONNETE_PLACED = PlacementUtils.register("stonnete", Configured.FLOWER_STONNETE.placed(RarityFilter.onAverageOnceEvery(64), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome()));
+        public static final PlacedFeature SPIKED_TULIP_PLACED = PlacementUtils.register("spiked_tulip", Configured.FLOWER_SPIKED_TULIP.placed(CountPlacement.of(3), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome()));
+        public static final PlacedFeature STONNETE_PLACED = PlacementUtils.register("stonnete", Configured.FLOWER_STONNETE.placed(CountPlacement.of(3), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome()));
         public static final PlacedFeature LUNULA_PLACED = PlacementUtils.register("lunula", Configured.FLOWER_LUNULA.placed(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         public static final PlacedFeature ANTHURIUM_PLACED = PlacementUtils.register("anthurium", Configured.FLOWER_ANTHURIUM.placed(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
-
-
     }
 }
