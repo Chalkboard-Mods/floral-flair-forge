@@ -3,6 +3,7 @@ package chalkboardmods.floralflair.core.other;
 import chalkboardmods.floralflair.core.FloralFlair;
 import chalkboardmods.floralflair.core.registry.FloralFeatures;
 import com.teamabnormals.blueprint.core.util.DataUtil;
+import net.minecraft.data.worldgen.biome.OverworldBiomes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
@@ -47,10 +48,9 @@ public class FloralGeneration {
         }
         if (event.getCategory() == Biome.BiomeCategory.UNDERGROUND) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.STONNETE_PLACED);
-        }
-        if (biome.toString().contains("dripstone")) {
-            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.SPIKED_TULIP_PLACED);
-
+            if (DataUtil.matchesKeys(biome, Biomes.DRIPSTONE_CAVES)) {
+                generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.SPIKED_TULIP_PLACED);
+            }
         }
         if (DataUtil.matchesKeys(biome, Biomes.MEADOW)) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.ROSE_PLACED);
