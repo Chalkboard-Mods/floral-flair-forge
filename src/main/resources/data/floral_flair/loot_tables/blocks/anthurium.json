@@ -1,0 +1,19 @@
+{
+      "type": "minecraft:block",
+      "pools": [
+            {
+                  "rolls": 1,
+                  "entries": [
+                        {
+                              "type": "minecraft:item",
+                              "name": "floral_flair:anthurium"
+                        }
+                  ],
+                  "conditions": [
+                        {
+                              "condition": "minecraft:survives_explosion"
+                        }
+                  ]
+            }
+      ]
+}
