@@ -26,6 +26,7 @@ public class FloralBlocks {
     private static ToIntFunction<BlockState> createLightLevelFromTimeBlockState(int litLevel) {
         return (state) -> state.getValue(FloralProperties.TIME) == 3 ? litLevel : 0;
     }
+
     public static final BlockSubRegistryHelper HELPER = FloralFlair.REGISTRY_HELPER.getBlockSubHelper();
     public static final RegistryObject<Block> FOXNIP = HELPER.createBlock("foxnip", () -> new BlueprintFlowerBlock(() -> MobEffects.MOVEMENT_SLOWDOWN, 8, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> FROSTED_FOXNIP = HELPER.createBlock("frosted_foxnip", () -> new BlueprintFlowerBlock(() -> MobEffects.MOVEMENT_SLOWDOWN, 5, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
