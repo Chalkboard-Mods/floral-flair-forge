@@ -84,7 +84,7 @@ jar {
         attributes([
                 "Specification-Title"     : "Floral Flair",
                 "Specification-Vendor"    : "Chalkboard Mods",
-                "Specification-Version"   : "1",
+                "Specification-Version"   : "1.2",
                 "Implementation-Title"    : "Floral Flair",
                 "Implementation-Version"  : project.version,
                 "Implementation-Vendor"   : "Chalkboard Mods",

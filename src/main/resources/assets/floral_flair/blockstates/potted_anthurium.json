@@ -1,7 +1,21 @@
+
 {
       "variants": {
-            "": {
-                  "model": "floral_flair:block/potted_anthurium"
+            "facing=east": {
+                  "model": "floral_flair:block/potted_anthurium",
+                  "y": 270
+            },
+            "facing=north": {
+                  "model": "floral_flair:block/potted_anthurium",
+                  "y": 180
+            },
+            "facing=south": {
+                  "model": "floral_flair:block/potted_anthurium",
+                  "y": 0
+            },
+            "facing=west": {
+                  "model": "floral_flair:block/potted_anthurium",
+                  "y": 90
             }
       }
 }

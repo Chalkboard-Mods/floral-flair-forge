@@ -59,6 +59,6 @@ public class FloralBlocks {
     public static final RegistryObject<Block> POTTED_SNOW_FALL_FLOWER = HELPER.createBlockNoItem("potted_snow_fall_flower", () -> new FlowerPotBlock(SNOW_FALL_FLOWER.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_SPIKED_TULIP = HELPER.createBlockNoItem("potted_spiked_tulip", () -> new FlowerPotBlock(SPIKED_TULIP.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_STONNETE = HELPER.createBlockNoItem("potted_stonnete", () -> new FlowerPotBlock(STONNETE.get(), PropertyUtil.FLOWER_POT));
-    public static final RegistryObject<Block> POTTED_LUNULA = HELPER.createBlockNoItem("potted_lunula", () -> new FlowerPotBlock(LUNULA.get(), PropertyUtil.FLOWER_POT));
-    public static final RegistryObject<Block> POTTED_ANTHURIUM = HELPER.createBlockNoItem("potted_anthurium", () -> new FlowerPotBlock(ANTHURIUM.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_LUNULA = HELPER.createBlockNoItem("potted_lunula", () -> new PottedLunulaBlock(LUNULA.get(), BlockBehaviour.Properties.of(Material.PLANT).lightLevel(createLightLevelFromTimeBlockState(5))));
+    public static final RegistryObject<Block> POTTED_ANTHURIUM = HELPER.createBlockNoItem("potted_anthurium", () -> new PottedAnthuriumBlock(ANTHURIUM.get(), PropertyUtil.FLOWER_POT));
 }

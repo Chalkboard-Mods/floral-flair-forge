@@ -19,7 +19,7 @@ public class SpikedTulipBlock extends BlueprintFlowerBlock {
     }
     @Override
     protected boolean mayPlaceOn(BlockState state, BlockGetter getter, BlockPos pos) {
-        return state.is(Blocks.DRIPSTONE_BLOCK);
+        return state.is(Blocks.DRIPSTONE_BLOCK) || state.is(BlockTags.BASE_STONE_OVERWORLD);
     }
 
     @Override
