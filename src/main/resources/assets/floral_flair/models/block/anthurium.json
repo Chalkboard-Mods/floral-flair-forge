@@ -2,7 +2,9 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "floral_flair:block/anthurium_top",
-		"1": "floral_flair:block/anthurium_bottom"
+		"1": "floral_flair:block/anthurium_bottom",
+		"particle": "floral_flair:block/anthurium_top"
+
 	},
 	"elements": [
 		{
