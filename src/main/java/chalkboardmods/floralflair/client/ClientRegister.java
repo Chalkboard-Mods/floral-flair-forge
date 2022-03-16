@@ -28,13 +28,11 @@ public class ClientRegister {
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.SCILLA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.MIDNIGHT_ORCHID.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.HYACINTH.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.SNOW_FALL_FLOWER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.SNOWFALL_FLOWER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.SPIKED_TULIP.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.STONNETE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.LUNULA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.ANTHURIUM.get(), RenderType.cutout());
-
-
 
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_FOXNIP.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_FROSTED_FOXNIP.get(), RenderType.cutout());
@@ -45,7 +43,7 @@ public class ClientRegister {
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_SCILLA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_MIDNIGHT_ORCHID.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_HYACINTH.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_SNOW_FALL_FLOWER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_SNOWFALL_FLOWER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_SPIKED_TULIP.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_STONNETE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_LUNULA.get(), RenderType.cutout());

@@ -42,7 +42,7 @@ public class FloralGeneration {
 
         if (biome.toString().contains("snowy")) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.MUSCARI_PLACED);
-            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.SNOW_FALL_FLOWER_PLACED);
+            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.SNOWFALL_FLOWER_PLACED);
         }
 
         if (event.getCategory() == Biome.BiomeCategory.SAVANNA) {
