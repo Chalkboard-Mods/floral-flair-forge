@@ -2,10 +2,8 @@ package chalkboardmods.floralflair.common.blocks;
 
 import chalkboardmods.floralflair.common.FloralProperties;
 import chalkboardmods.floralflair.core.registry.FloralBlocks;
-import com.teamabnormals.blueprint.common.block.BlueprintFlowerBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -17,14 +15,12 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 import javax.annotation.Nullable;
 import java.util.Random;
-import java.util.function.Supplier;
 
 public class PottedLunulaBlock extends FlowerPotBlock {
     public static final IntegerProperty TIME = FloralProperties.TIME;
 
     public PottedLunulaBlock(Block p_53528_, Properties p_53529_) {
         super(p_53528_, p_53529_);
-        this.registerDefaultState(this.stateDefinition.any().setValue(TIME, 0));
 
     }
 
@@ -76,5 +72,4 @@ public class PottedLunulaBlock extends FlowerPotBlock {
         }
         return state;
     }
-
 }

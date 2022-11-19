@@ -10,12 +10,8 @@ import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -26,8 +22,6 @@ public class FloralBlocks {
     private static ToIntFunction<BlockState> createLightLevelFromTimeBlockState(int litLevel) {
         return (state) -> state.getValue(FloralProperties.TIME) == 3 ? litLevel : 0;
     }
-
-
 
     public static final BlockSubRegistryHelper HELPER = FloralFlair.REGISTRY_HELPER.getBlockSubHelper();
     public static final RegistryObject<Block> FOXNIP = HELPER.createBlock("foxnip", () -> new BlueprintFlowerBlock(() -> MobEffects.MOVEMENT_SLOWDOWN, 8, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
@@ -45,7 +39,7 @@ public class FloralBlocks {
     public static final RegistryObject<Block> SNOWFALL_FLOWER = HELPER.createBlock("snow_fall_flower", () -> new BlueprintFlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 11, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> SPIKED_TULIP = HELPER.createBlock("spiked_tulip", () -> new SpikedTulipBlock(() -> MobEffects.FIRE_RESISTANCE, 11, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> STONNETE = HELPER.createBlock("stonnete", () -> new StonetteBlock(() -> MobEffects.FIRE_RESISTANCE, 11, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> LUNULA = HELPER.createBlock("lunula", () -> new LunulaBlock(() -> MobEffects.FIRE_RESISTANCE, 11, BlockBehaviour.Properties.of(Material.PLANT).instabreak().noCollission().lightLevel(createLightLevelFromTimeBlockState(5))), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> LUNULA = HELPER.createBlock("lunula", () -> new LunulaBlock(() -> MobEffects.FIRE_RESISTANCE, 11, PropertyUtil.FLOWER.lightLevel(createLightLevelFromTimeBlockState(5))), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> ANTHURIUM = HELPER.createBlock("anthurium", () -> new AnthuriumBlock(() -> MobEffects.FIRE_RESISTANCE, 11, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
 
 
@@ -61,6 +55,6 @@ public class FloralBlocks {
     public static final RegistryObject<Block> POTTED_SNOWFALL_FLOWER = HELPER.createBlockNoItem("potted_snow_fall_flower", () -> new FlowerPotBlock(SNOWFALL_FLOWER.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_SPIKED_TULIP = HELPER.createBlockNoItem("potted_spiked_tulip", () -> new FlowerPotBlock(SPIKED_TULIP.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_STONNETE = HELPER.createBlockNoItem("potted_stonnete", () -> new FlowerPotBlock(STONNETE.get(), PropertyUtil.FLOWER_POT));
-    public static final RegistryObject<Block> POTTED_LUNULA = HELPER.createBlockNoItem("potted_lunula", () -> new PottedLunulaBlock(LUNULA.get(), BlockBehaviour.Properties.of(Material.PLANT).lightLevel(createLightLevelFromTimeBlockState(5))));
+    public static final RegistryObject<Block> POTTED_LUNULA = HELPER.createBlockNoItem("potted_lunula", () -> new PottedLunulaBlock(LUNULA.get(), PropertyUtil.FLOWER_POT.lightLevel(createLightLevelFromTimeBlockState(5))));
     public static final RegistryObject<Block> POTTED_ANTHURIUM = HELPER.createBlockNoItem("potted_anthurium", () -> new PottedAnthuriumBlock(ANTHURIUM.get(), PropertyUtil.FLOWER_POT));
 }
