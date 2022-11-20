@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floral_flair:foxnip"
+    }
+  ],
+  "result": {
+    "item": "minecraft:orange_dye"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "floral_flair:block/purpureum_top"
+    },
+    "half=lower": {
+      "model": "floral_flair:block/purpureum_bottom"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "floral_flair:crafting/purple_dye_from_midnight_orchid"
+    ]
+  },
+  "criteria": {
+    "has_midnight_orchid": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "floral_flair:midnight_orchid"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "floral_flair:crafting/purple_dye_from_midnight_orchid"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_midnight_orchid",
+      "has_the_recipe"
+    ]
+  ]
+}

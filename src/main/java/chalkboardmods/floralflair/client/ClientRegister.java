@@ -32,7 +32,6 @@ public class ClientRegister {
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.SPIKED_TULIP.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.STONNETE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.LUNULA.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.ANTHURIUM.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_FOXNIP.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_FROSTED_FOXNIP.get(), RenderType.cutout());
@@ -47,11 +46,5 @@ public class ClientRegister {
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_SPIKED_TULIP.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_STONNETE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_LUNULA.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(FloralBlocks.POTTED_ANTHURIUM.get(), RenderType.cutout());
-
-
-
-
-
     }
 }

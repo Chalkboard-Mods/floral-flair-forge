@@ -26,7 +26,6 @@ public class PottedLunulaBlock extends FlowerPotBlock {
 
     @Override
     public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> stateManager){
-        super.createBlockStateDefinition(stateManager);
         stateManager.add(TIME);
     }
     @Override
@@ -39,7 +38,7 @@ public class PottedLunulaBlock extends FlowerPotBlock {
     }
     @Override
     public void randomTick(BlockState state, ServerLevel world, BlockPos pos, Random random) {
-        world.setBlockAndUpdate(pos, FloralBlocks.LUNULA.get().defaultBlockState().setValue(TIME, getLunulaState(world)));
+        world.setBlockAndUpdate(pos, FloralBlocks.POTTED_LUNULA.get().defaultBlockState().setValue(TIME, getLunulaState(world)));
 
 
     }

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "floral_flair:crafting/cyan_dye_from_muscari"
+    ]
+  },
+  "criteria": {
+    "has_muscari": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "floral_flair:muscari"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "floral_flair:crafting/cyan_dye_from_muscari"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_muscari",
+      "has_the_recipe"
+    ]
+  ]
+}

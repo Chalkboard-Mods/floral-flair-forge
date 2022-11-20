@@ -12,36 +12,34 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.Random;
 import java.util.function.Supplier;
 
+import static chalkboardmods.floralflair.common.FloralProperties.TIME;
+
 public class LunulaBlock extends BlueprintFlowerBlock {
-    public static final IntegerProperty TIME = FloralProperties.TIME;
     public LunulaBlock(Supplier<MobEffect> stewEffect, int stewEffectDuration, Properties properties) {
         super(stewEffect, stewEffectDuration, properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(TIME, 0));
     }
     @Override
     public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> stateManager){
-        super.createBlockStateDefinition(stateManager);
         stateManager.add(TIME);
     }
     @Override
-    public boolean isRandomlyTicking(BlockState state) {
+    public boolean isRandomlyTicking(@NotNull BlockState state) {
         return true;
     }
     @Override
-    public void setPlacedBy(Level world, BlockPos pos, BlockState state, @Nullable LivingEntity p_49850_, ItemStack p_49851_) {
-        world.setBlockAndUpdate(pos, FloralBlocks.LUNULA.get().defaultBlockState().setValue(TIME, getLunulaState(world)));
+    public void setPlacedBy(Level world, @NotNull BlockPos pos, @NotNull BlockState state, @Nullable LivingEntity entity, @NotNull ItemStack stack) {
+        world.setBlockAndUpdate(pos, FloralBlocks.LUNULA.get().defaultBlockState().setValue(FloralProperties.TIME, getLunulaState(world)));
     }
     @Override
-    public void randomTick(BlockState state, ServerLevel world, BlockPos pos, Random random) {
-        world.setBlockAndUpdate(pos, FloralBlocks.LUNULA.get().defaultBlockState().setValue(TIME, getLunulaState(world)));
-
-
+    public void randomTick(@NotNull BlockState state, ServerLevel world, @NotNull BlockPos pos, @NotNull Random random) {
+        world.setBlockAndUpdate(pos, FloralBlocks.LUNULA.get().defaultBlockState().setValue(FloralProperties.TIME, getLunulaState(world)));
     }
     private int getLunulaState(Level world) {
         long i = world.getDayTime();

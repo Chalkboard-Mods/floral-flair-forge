@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "floral_flair:crafting/orange_dye_from_sunset_poppy"
+    ]
+  },
+  "criteria": {
+    "has_sunset_poppy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "floral_flair:sunset_poppy"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "floral_flair:crafting/orange_dye_from_sunset_poppy"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sunset_poppy",
+      "has_the_recipe"
+    ]
+  ]
+}

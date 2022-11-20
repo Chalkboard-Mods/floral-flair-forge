@@ -1,8 +1,0 @@
-
-{
-    "parent": "block/flower_pot_cross",
-    "textures": {
-        "plant": "floral_flair:block/scilla",
-        "dirt": "minecraft:block/snow"
-    }
-}

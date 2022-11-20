@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "floral_flair:crafting/light_blue_dye_from_frosted_foxnip"
+    ]
+  },
+  "criteria": {
+    "has_frosted_foxnip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "floral_flair:frosted_foxnip"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "floral_flair:crafting/light_blue_dye_from_frosted_foxnip"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_frosted_foxnip",
+      "has_the_recipe"
+    ]
+  ]
+}

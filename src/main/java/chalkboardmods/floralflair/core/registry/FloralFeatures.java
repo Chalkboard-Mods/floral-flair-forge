@@ -21,8 +21,6 @@ import net.minecraftforge.fml.common.Mod;
 public class FloralFeatures {
 
     public static final class Configured {
-        private static final WeightedStateProvider ANTHURIUM_WEIGHTS = new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>().add(FloralBlocks.ANTHURIUM.get().defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH), 4).add(FloralBlocks.ANTHURIUM.get().defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST), 4).add(FloralBlocks.ANTHURIUM.get().defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH), 4).add(FloralBlocks.ANTHURIUM.get().defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST), 4));
-
         public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLOWER_FOXNIP = FeatureUtils.register("flower_foxnip", Feature.FLOWER, new RandomPatchConfiguration(64, 4, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.FOXNIP.get())))));
         public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLOWER_FROSTED_FOXNIP = FeatureUtils.register("flower_frosted_foxnip", Feature.FLOWER, new RandomPatchConfiguration(64, 4, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.FROSTED_FOXNIP.get())))));
         public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLOWER_PULSE_PETAL = FeatureUtils.register("flower_pulse_petal", Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.PULSE_PETAL.get())))));
@@ -39,7 +37,6 @@ public class FloralFeatures {
         public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLOWER_SPIKED_TULIP = FeatureUtils.register("flower_spiked_tulip", Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.SPIKED_TULIP.get())))));
         public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLOWER_STONNETE = FeatureUtils.register("flower_stonnete", Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.STONNETE.get())))));
         public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLOWER_LUNULA = FeatureUtils.register("flower_lunula", Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.LUNULA.get())))));
-        public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLOWER_ANTHURIUM = FeatureUtils.register("flower_anthurium", Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(ANTHURIUM_WEIGHTS))));
     }
 
     public static final class Placed {
@@ -59,6 +56,5 @@ public class FloralFeatures {
         public static final Holder<PlacedFeature> SPIKED_TULIP_PLACED = PlacementUtils.register("spiked_tulip", Configured.FLOWER_SPIKED_TULIP, CountPlacement.of(3), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome());
         public static final Holder<PlacedFeature> STONNETE_PLACED = PlacementUtils.register("stonnete", Configured.FLOWER_STONNETE, CountPlacement.of(3), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome());
         public static final Holder<PlacedFeature> LUNULA_PLACED = PlacementUtils.register("lunula", Configured.FLOWER_LUNULA, RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
-        public static final Holder<PlacedFeature> ANTHURIUM_PLACED = PlacementUtils.register("anthurium", Configured.FLOWER_ANTHURIUM, RarityFilter.onAverageOnceEvery(8), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
     }
 }

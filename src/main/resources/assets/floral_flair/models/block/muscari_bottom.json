@@ -1,6 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "floral_flair:block/muscari_bottom"
-  }
-}

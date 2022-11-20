@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "floral_flair:crafting/gray_dye_from_stonnete"
+    ]
+  },
+  "criteria": {
+    "has_stonnete": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "floral_flair:stonnete"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "floral_flair:crafting/gray_dye_from_stonnete"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_stonnete",
+      "has_the_recipe"
+    ]
+  ]
+}

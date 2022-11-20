@@ -55,7 +55,8 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             args '--mod', 'floral_flair', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
@@ -72,14 +73,21 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven {
         url = "https://maven.jaackson.me"
     }
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.0.17'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.0'
 
-    implementation fg.deobf("com.teamabnormals:blueprint:1.18.2-5.2.0")
+    implementation fg.deobf("com.teamabnormals:blueprint:1.18.2-5.5.0")
+    implementation fg.deobf("curse.maven:farmersdelight-398521:3765351")
 }
 
 jar {

@@ -1,7 +1,0 @@
-
-{
-  "variants": {
-    "half=lower": { "model": "floral_flair:block/purpureum_bottom" },
-    "half=upper":    { "model": "floral_flair:block/purpureum_top" }
-  }
-}

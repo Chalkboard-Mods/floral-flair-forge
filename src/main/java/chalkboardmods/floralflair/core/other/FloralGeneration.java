@@ -30,7 +30,6 @@ public class FloralGeneration {
         }
         if (event.getCategory() == Biome.BiomeCategory.FOREST) {
             generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.PULSE_PLACED);
-            generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.ANTHURIUM_PLACED);
             if (DataUtil.matchesKeys(biome, Biomes.FLOWER_FOREST)) {
                 generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.FAIRY_BLOSSOM_PLACED);
                 generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FloralFeatures.Placed.HYACINTH_PLACED);
