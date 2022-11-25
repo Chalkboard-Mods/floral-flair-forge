@@ -21,13 +21,15 @@ public class FloralBlockTagsProvider extends BlockTagsProvider {
                 FloralBlocks.PULSE_PETAL.get(),
                 FloralBlocks.JUNGLE_GEM.get(),
                 FloralBlocks.ROSE.get(),
-                FloralBlocks.SUNSET_POPPY.get(),
                 FloralBlocks.SCILLA.get(),
                 FloralBlocks.MIDNIGHT_ORCHID.get(),
                 FloralBlocks.HYACINTH.get(),
-                FloralBlocks.SNOWFALL_FLOWER.get(),
                 FloralBlocks.SPIKED_TULIP.get(),
                 FloralBlocks.STONNETE.get(),
+                FloralBlocks.ORANGE_COSMOS.get(),
+                FloralBlocks.WHITE_COSMOS.get(),
+                FloralBlocks.PINK_COSMOS.get(),
+                FloralBlocks.CHOCOLATE_COSMOS.get(),
                 FloralBlocks.LUNULA.get()
         );
         tag(BlockTags.TALL_FLOWERS).add(
@@ -41,13 +43,15 @@ public class FloralBlockTagsProvider extends BlockTagsProvider {
                 FloralBlocks.POTTED_PULSE_PETAL.get(),
                 FloralBlocks.POTTED_JUNGLE_GEM.get(),
                 FloralBlocks.POTTED_ROSE.get(),
-                FloralBlocks.POTTED_SUNSET_POPPY.get(),
                 FloralBlocks.POTTED_SCILLA.get(),
                 FloralBlocks.POTTED_MIDNIGHT_ORCHID.get(),
                 FloralBlocks.POTTED_HYACINTH.get(),
-                FloralBlocks.POTTED_SNOWFALL_FLOWER.get(),
                 FloralBlocks.POTTED_SPIKED_TULIP.get(),
                 FloralBlocks.POTTED_STONNETE.get(),
+                FloralBlocks.POTTED_ORANGE_COSMOS.get(),
+                FloralBlocks.POTTED_WHITE_COSMOS.get(),
+                FloralBlocks.POTTED_PINK_COSMOS.get(),
+                FloralBlocks.POTTED_CHOCOLATE_COSMOS.get(),
                 FloralBlocks.POTTED_LUNULA.get()
         );
     }

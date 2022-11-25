@@ -51,7 +51,6 @@ public class FloralLootTableProvider extends LootTableProvider {
             this.add(FloralBlocks.FAIRY_BLOSSOM.get(), (block) -> createSinglePropConditionTable(block, DoublePlantBlock.HALF, DoubleBlockHalf.LOWER));
             this.dropSelf(FloralBlocks.JUNGLE_GEM.get());
             this.dropSelf(FloralBlocks.ROSE.get());
-            this.dropSelf(FloralBlocks.SUNSET_POPPY.get());
             this.add(FloralBlocks.MUSCARI.get(), (block) -> createSinglePropConditionTable(block, DoublePlantBlock.HALF, DoubleBlockHalf.LOWER));
             this.add(FloralBlocks.PURPUREUM.get(), (block) -> {
                 return createSinglePropConditionTable(block, DoublePlantBlock.HALF, DoubleBlockHalf.LOWER);
@@ -59,9 +58,12 @@ public class FloralLootTableProvider extends LootTableProvider {
             this.dropSelf(FloralBlocks.SCILLA.get());
             this.dropSelf(FloralBlocks.MIDNIGHT_ORCHID.get());
             this.dropSelf(FloralBlocks.HYACINTH.get());
-            this.dropSelf(FloralBlocks.SNOWFALL_FLOWER.get());
             this.dropSelf(FloralBlocks.SPIKED_TULIP.get());
             this.dropSelf(FloralBlocks.STONNETE.get());
+            this.dropSelf(FloralBlocks.ORANGE_COSMOS.get());
+            this.dropSelf(FloralBlocks.WHITE_COSMOS.get());
+            this.dropSelf(FloralBlocks.PINK_COSMOS.get());
+            this.dropSelf(FloralBlocks.CHOCOLATE_COSMOS.get());
             this.dropSelf(FloralBlocks.LUNULA.get());
 
             this.dropPottedContents(FloralBlocks.POTTED_FOXNIP.get());
@@ -69,13 +71,15 @@ public class FloralLootTableProvider extends LootTableProvider {
             this.dropPottedContents(FloralBlocks.POTTED_PULSE_PETAL.get());
             this.dropPottedContents(FloralBlocks.POTTED_JUNGLE_GEM.get());
             this.dropPottedContents(FloralBlocks.POTTED_ROSE.get());
-            this.dropPottedContents(FloralBlocks.POTTED_SUNSET_POPPY.get());
             this.dropPottedContents(FloralBlocks.POTTED_SCILLA.get());
             this.dropPottedContents(FloralBlocks.POTTED_MIDNIGHT_ORCHID.get());
             this.dropPottedContents(FloralBlocks.POTTED_HYACINTH.get());
-            this.dropPottedContents(FloralBlocks.POTTED_SNOWFALL_FLOWER.get());
             this.dropPottedContents(FloralBlocks.POTTED_SPIKED_TULIP.get());
             this.dropPottedContents(FloralBlocks.POTTED_STONNETE.get());
+            this.dropPottedContents(FloralBlocks.POTTED_ORANGE_COSMOS.get());
+            this.dropPottedContents(FloralBlocks.POTTED_WHITE_COSMOS.get());
+            this.dropPottedContents(FloralBlocks.POTTED_PINK_COSMOS.get());
+            this.dropPottedContents(FloralBlocks.POTTED_CHOCOLATE_COSMOS.get());
             this.dropPottedContents(FloralBlocks.POTTED_LUNULA.get());
         }
 

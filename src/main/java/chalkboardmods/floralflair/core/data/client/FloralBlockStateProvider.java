@@ -30,13 +30,15 @@ public class FloralBlockStateProvider extends BlockStateProvider {
         crossModelBlock(FloralBlocks.PULSE_PETAL);
         crossModelBlock(FloralBlocks.JUNGLE_GEM);
         crossModelBlock(FloralBlocks.ROSE);
-        crossModelBlock(FloralBlocks.SUNSET_POPPY);
         crossModelBlock(FloralBlocks.SCILLA);
         crossModelBlock(FloralBlocks.MIDNIGHT_ORCHID);
         crossModelBlock(FloralBlocks.HYACINTH);
-        crossModelBlock(FloralBlocks.SNOWFALL_FLOWER);
         crossModelBlock(FloralBlocks.SPIKED_TULIP);
         crossModelBlock(FloralBlocks.STONNETE);
+        crossModelBlock(FloralBlocks.ORANGE_COSMOS);
+        crossModelBlock(FloralBlocks.WHITE_COSMOS);
+        crossModelBlock(FloralBlocks.PINK_COSMOS);
+        crossModelBlock(FloralBlocks.CHOCOLATE_COSMOS);
         tallFlowerBlock(FloralBlocks.FAIRY_BLOSSOM);
         tallFlowerBlock(FloralBlocks.MUSCARI);
         tallFlowerBlock(FloralBlocks.PURPUREUM);
@@ -47,13 +49,15 @@ public class FloralBlockStateProvider extends BlockStateProvider {
         pottedFlowerBlock(FloralBlocks.POTTED_PULSE_PETAL);
         pottedFlowerBlock(FloralBlocks.POTTED_JUNGLE_GEM);
         pottedFlowerBlock(FloralBlocks.POTTED_ROSE);
-        pottedFlowerBlock(FloralBlocks.POTTED_SUNSET_POPPY);
         pottedFlowerBlock(FloralBlocks.POTTED_SCILLA);
         pottedFlowerBlock(FloralBlocks.POTTED_MIDNIGHT_ORCHID);
         pottedFlowerBlock(FloralBlocks.POTTED_HYACINTH);
-        pottedFlowerBlock(FloralBlocks.POTTED_SNOWFALL_FLOWER);
         pottedFlowerBlock(FloralBlocks.POTTED_SPIKED_TULIP);
         pottedFlowerBlock(FloralBlocks.POTTED_STONNETE);
+        pottedFlowerBlock(FloralBlocks.POTTED_ORANGE_COSMOS);
+        pottedFlowerBlock(FloralBlocks.POTTED_WHITE_COSMOS);
+        pottedFlowerBlock(FloralBlocks.POTTED_PINK_COSMOS);
+        pottedFlowerBlock(FloralBlocks.POTTED_CHOCOLATE_COSMOS);
         pottedLunulaBlock();
     }
 

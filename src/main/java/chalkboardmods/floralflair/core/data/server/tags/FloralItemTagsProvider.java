@@ -21,13 +21,15 @@ public class FloralItemTagsProvider extends BlueprintItemTagsProvider {
                 FloralBlocks.PULSE_PETAL.get().asItem(),
                 FloralBlocks.JUNGLE_GEM.get().asItem(),
                 FloralBlocks.ROSE.get().asItem(),
-                FloralBlocks.SUNSET_POPPY.get().asItem(),
                 FloralBlocks.SCILLA.get().asItem(),
                 FloralBlocks.MIDNIGHT_ORCHID.get().asItem(),
                 FloralBlocks.HYACINTH.get().asItem(),
-                FloralBlocks.SNOWFALL_FLOWER.get().asItem(),
                 FloralBlocks.SPIKED_TULIP.get().asItem(),
                 FloralBlocks.STONNETE.get().asItem(),
+                FloralBlocks.ORANGE_COSMOS.get().asItem(),
+                FloralBlocks.WHITE_COSMOS.get().asItem(),
+                FloralBlocks.PINK_COSMOS.get().asItem(),
+                FloralBlocks.CHOCOLATE_COSMOS.get().asItem(),
                 FloralBlocks.LUNULA.get().asItem()
         );
         tag(ItemTags.TALL_FLOWERS).add(

@@ -30,15 +30,17 @@ public class FloralRecipeProvider extends RecipeProvider {
         createDyeFromFlowerRecipe(FloralBlocks.FAIRY_BLOSSOM.get(), Items.MAGENTA_DYE, 2, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.JUNGLE_GEM.get(), Items.YELLOW_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.ROSE.get(), Items.RED_DYE, consumer);
-        createDyeFromFlowerRecipe(FloralBlocks.SUNSET_POPPY.get(), Items.ORANGE_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.MUSCARI.get(), Items.CYAN_DYE, 2, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.PURPUREUM.get(), Items.MAGENTA_DYE, 2, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.SCILLA.get(), Items.LIGHT_BLUE_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.MIDNIGHT_ORCHID.get(), Items.PURPLE_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.HYACINTH.get(), Items.PINK_DYE, consumer);
-        createDyeFromFlowerRecipe(FloralBlocks.SNOWFALL_FLOWER.get(), Items.WHITE_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.SPIKED_TULIP.get(), Items.BROWN_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.STONNETE.get(), Items.GRAY_DYE, consumer);
+        createDyeFromFlowerRecipe(FloralBlocks.ORANGE_COSMOS.get(), Items.ORANGE_DYE, consumer);
+        createDyeFromFlowerRecipe(FloralBlocks.WHITE_COSMOS.get(), Items.WHITE_DYE, consumer);
+        createDyeFromFlowerRecipe(FloralBlocks.PINK_COSMOS.get(), Items.PINK_DYE, consumer);
+        createDyeFromFlowerRecipe(FloralBlocks.CHOCOLATE_COSMOS.get(), Items.BROWN_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.LUNULA.get(), Items.BLUE_DYE, consumer);
 
         createDyeFromCuttingFlowersRecipe(FloralBlocks.FOXNIP.get(), Items.ORANGE_DYE, consumer);
@@ -46,13 +48,15 @@ public class FloralRecipeProvider extends RecipeProvider {
         createDyeFromCuttingFlowersRecipe(FloralBlocks.PULSE_PETAL.get(), Items.RED_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.JUNGLE_GEM.get(), Items.YELLOW_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.ROSE.get(), Items.RED_DYE, consumer);
-        createDyeFromCuttingFlowersRecipe(FloralBlocks.SUNSET_POPPY.get(), Items.ORANGE_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.SCILLA.get(), Items.LIGHT_BLUE_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.MIDNIGHT_ORCHID.get(), Items.PURPLE_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.HYACINTH.get(), Items.PINK_DYE, consumer);
-        createDyeFromCuttingFlowersRecipe(FloralBlocks.SNOWFALL_FLOWER.get(), Items.WHITE_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.SPIKED_TULIP.get(), Items.BROWN_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.STONNETE.get(), Items.GRAY_DYE, consumer);
+        createDyeFromCuttingFlowersRecipe(FloralBlocks.ORANGE_COSMOS.get(), Items.ORANGE_DYE, consumer);
+        createDyeFromCuttingFlowersRecipe(FloralBlocks.WHITE_COSMOS.get(), Items.WHITE_DYE, consumer);
+        createDyeFromCuttingFlowersRecipe(FloralBlocks.PINK_COSMOS.get(), Items.PINK_DYE, consumer);
+        createDyeFromCuttingFlowersRecipe(FloralBlocks.CHOCOLATE_COSMOS.get(), Items.BROWN_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.LUNULA.get(), Items.BLUE_DYE, consumer);
     }
 
