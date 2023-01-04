@@ -25,7 +25,7 @@ public class FloralItemTagsProvider extends BlueprintItemTagsProvider {
                 FloralBlocks.MIDNIGHT_ORCHID.get().asItem(),
                 FloralBlocks.HYACINTH.get().asItem(),
                 FloralBlocks.SPIKED_TULIP.get().asItem(),
-                FloralBlocks.STONNETE.get().asItem(),
+                FloralBlocks.STONETTE.get().asItem(),
                 FloralBlocks.ORANGE_COSMOS.get().asItem(),
                 FloralBlocks.WHITE_COSMOS.get().asItem(),
                 FloralBlocks.PINK_COSMOS.get().asItem(),

@@ -41,7 +41,7 @@ public class FloralBlocks {
     public static final RegistryObject<Block> MIDNIGHT_ORCHID = HELPER.createBlock("midnight_orchid", () -> new BlueprintFlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 11, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> HYACINTH = HELPER.createBlock("hyacinth", () -> new BlueprintFlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 11, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> SPIKED_TULIP = HELPER.createBlock("spiked_tulip", () -> new SpikedTulipBlock(() -> MobEffects.MOVEMENT_SPEED, 9, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> STONNETE = HELPER.createBlock("stonnete", () -> new StonetteBlock(() -> MobEffects.DIG_SPEED, 6, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> STONETTE = HELPER.createBlock("stonette", () -> new StonetteBlock(() -> MobEffects.DIG_SPEED, 6, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> LUNULA = HELPER.createBlock("lunula", () -> new LunulaBlock(() -> MobEffects.GLOWING, 10, Properties.LUNULA.lightLevel(createLightLevelFromTimeBlockState(5))), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> ORANGE_COSMOS = HELPER.createBlock("orange_cosmos", () -> new BlueprintFlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 9, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> WHITE_COSMOS = HELPER.createBlock("white_cosmos", () -> new BlueprintFlowerBlock(() -> MobEffects.SLOW_FALLING, 7, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
@@ -59,7 +59,7 @@ public class FloralBlocks {
     public static final RegistryObject<Block> POTTED_MIDNIGHT_ORCHID = HELPER.createBlockNoItem("potted_midnight_orchid", () -> new FlowerPotBlock(MIDNIGHT_ORCHID.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_HYACINTH = HELPER.createBlockNoItem("potted_hyacinth", () -> new FlowerPotBlock(HYACINTH.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_SPIKED_TULIP = HELPER.createBlockNoItem("potted_spiked_tulip", () -> new FlowerPotBlock(SPIKED_TULIP.get(), PropertyUtil.FLOWER_POT));
-    public static final RegistryObject<Block> POTTED_STONNETE = HELPER.createBlockNoItem("potted_stonnete", () -> new FlowerPotBlock(STONNETE.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_STONETTE = HELPER.createBlockNoItem("potted_stonette", () -> new FlowerPotBlock(STONETTE.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_LUNULA = HELPER.createBlockNoItem("potted_lunula", () -> new PottedLunulaBlock(LUNULA.get(), Properties.POTTED_LUNULA.lightLevel(createLightLevelFromTimeBlockState(5))));
     public static final RegistryObject<Block> POTTED_ORANGE_COSMOS = HELPER.createBlockNoItem("potted_orange_cosmos", () -> new FlowerPotBlock(ORANGE_COSMOS.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_WHITE_COSMOS = HELPER.createBlockNoItem("potted_white_cosmos", () -> new FlowerPotBlock(WHITE_COSMOS.get(), PropertyUtil.FLOWER_POT));

@@ -1,19 +1,14 @@
 package chalkboardmods.floralflair.core.registry;
 
 import chalkboardmods.floralflair.core.FloralFlair;
-import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
-import net.minecraft.util.random.SimpleWeightedRandomList;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraftforge.fml.common.Mod;
 
@@ -33,7 +28,7 @@ public class FloralFeatures {
         public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLOWER_MIDNIGHT_ORCHID = FeatureUtils.register("flower_midnight_orchid", Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.MIDNIGHT_ORCHID.get())))));
         public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLOWER_HYACINTH = FeatureUtils.register("flower_hyacinth", Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.HYACINTH.get())))));
         public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLOWER_SPIKED_TULIP = FeatureUtils.register("flower_spiked_tulip", Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.SPIKED_TULIP.get())))));
-        public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLOWER_STONNETE = FeatureUtils.register("flower_stonnete", Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.STONNETE.get())))));
+        public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLOWER_STONNETE = FeatureUtils.register("flower_stonnete", Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.STONETTE.get())))));
         public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> FLOWER_LUNULA = FeatureUtils.register("flower_lunula", Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(FloralBlocks.LUNULA.get())))));
     }
 

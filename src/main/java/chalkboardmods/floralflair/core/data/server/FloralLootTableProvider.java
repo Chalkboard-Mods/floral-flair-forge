@@ -3,7 +3,6 @@ package chalkboardmods.floralflair.core.data.server;
 import chalkboardmods.floralflair.core.registry.FloralBlocks;
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
-import com.teamabnormals.blueprint.core.util.DataUtil;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.data.loot.LootTableProvider;
@@ -22,7 +21,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
-import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class FloralLootTableProvider extends LootTableProvider {
@@ -52,14 +50,12 @@ public class FloralLootTableProvider extends LootTableProvider {
             this.dropSelf(FloralBlocks.JUNGLE_GEM.get());
             this.dropSelf(FloralBlocks.ROSE.get());
             this.add(FloralBlocks.MUSCARI.get(), (block) -> createSinglePropConditionTable(block, DoublePlantBlock.HALF, DoubleBlockHalf.LOWER));
-            this.add(FloralBlocks.PURPUREUM.get(), (block) -> {
-                return createSinglePropConditionTable(block, DoublePlantBlock.HALF, DoubleBlockHalf.LOWER);
-            });
+            this.add(FloralBlocks.PURPUREUM.get(), (block) -> createSinglePropConditionTable(block, DoublePlantBlock.HALF, DoubleBlockHalf.LOWER));
             this.dropSelf(FloralBlocks.SCILLA.get());
             this.dropSelf(FloralBlocks.MIDNIGHT_ORCHID.get());
             this.dropSelf(FloralBlocks.HYACINTH.get());
             this.dropSelf(FloralBlocks.SPIKED_TULIP.get());
-            this.dropSelf(FloralBlocks.STONNETE.get());
+            this.dropSelf(FloralBlocks.STONETTE.get());
             this.dropSelf(FloralBlocks.ORANGE_COSMOS.get());
             this.dropSelf(FloralBlocks.WHITE_COSMOS.get());
             this.dropSelf(FloralBlocks.PINK_COSMOS.get());
@@ -75,7 +71,7 @@ public class FloralLootTableProvider extends LootTableProvider {
             this.dropPottedContents(FloralBlocks.POTTED_MIDNIGHT_ORCHID.get());
             this.dropPottedContents(FloralBlocks.POTTED_HYACINTH.get());
             this.dropPottedContents(FloralBlocks.POTTED_SPIKED_TULIP.get());
-            this.dropPottedContents(FloralBlocks.POTTED_STONNETE.get());
+            this.dropPottedContents(FloralBlocks.POTTED_STONETTE.get());
             this.dropPottedContents(FloralBlocks.POTTED_ORANGE_COSMOS.get());
             this.dropPottedContents(FloralBlocks.POTTED_WHITE_COSMOS.get());
             this.dropPottedContents(FloralBlocks.POTTED_PINK_COSMOS.get());

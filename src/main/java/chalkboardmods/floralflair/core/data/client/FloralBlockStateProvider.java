@@ -34,7 +34,7 @@ public class FloralBlockStateProvider extends BlockStateProvider {
         crossModelBlock(FloralBlocks.MIDNIGHT_ORCHID);
         crossModelBlock(FloralBlocks.HYACINTH);
         crossModelBlock(FloralBlocks.SPIKED_TULIP);
-        crossModelBlock(FloralBlocks.STONNETE);
+        crossModelBlock(FloralBlocks.STONETTE);
         crossModelBlock(FloralBlocks.ORANGE_COSMOS);
         crossModelBlock(FloralBlocks.WHITE_COSMOS);
         crossModelBlock(FloralBlocks.PINK_COSMOS);
@@ -53,7 +53,7 @@ public class FloralBlockStateProvider extends BlockStateProvider {
         pottedFlowerBlock(FloralBlocks.POTTED_MIDNIGHT_ORCHID);
         pottedFlowerBlock(FloralBlocks.POTTED_HYACINTH);
         pottedFlowerBlock(FloralBlocks.POTTED_SPIKED_TULIP);
-        pottedFlowerBlock(FloralBlocks.POTTED_STONNETE);
+        pottedFlowerBlock(FloralBlocks.POTTED_STONETTE);
         pottedFlowerBlock(FloralBlocks.POTTED_ORANGE_COSMOS);
         pottedFlowerBlock(FloralBlocks.POTTED_WHITE_COSMOS);
         pottedFlowerBlock(FloralBlocks.POTTED_PINK_COSMOS);
@@ -72,15 +72,14 @@ public class FloralBlockStateProvider extends BlockStateProvider {
         ModelFile bottom = models().cross(ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom"));
 
         getVariantBuilder(block.get()).forAllStates((blockState) -> {
-            ModelFile file = top;
+            ModelFile file;
 
             if (blockState.getValue(DoublePlantBlock.HALF).equals(DoubleBlockHalf.UPPER)) {
                 file = top;
             }
-            if (blockState.getValue(DoublePlantBlock.HALF).equals(DoubleBlockHalf.LOWER)) {
+            else {
                 file = bottom;
             }
-
             return ConfiguredModel.builder()
                     .modelFile(file)
                     .build();

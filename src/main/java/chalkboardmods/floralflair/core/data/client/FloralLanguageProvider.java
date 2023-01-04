@@ -24,7 +24,7 @@ public class FloralLanguageProvider extends LanguageProvider {
         add(FloralBlocks.MIDNIGHT_ORCHID.get(), "Midnight Orchid");
         add(FloralBlocks.HYACINTH.get(), "Hyacinth");
         add(FloralBlocks.SPIKED_TULIP.get(), "Spiked Tulip");
-        add(FloralBlocks.STONNETE.get(), "Stonette");
+        add(FloralBlocks.STONETTE.get(), "Stonette");
         add(FloralBlocks.LUNULA.get(), "Lunula");
         add(FloralBlocks.ORANGE_COSMOS.get(), "Orange Cosmos");
         add(FloralBlocks.WHITE_COSMOS.get(), "White Cosmos");
@@ -40,7 +40,7 @@ public class FloralLanguageProvider extends LanguageProvider {
         add(FloralBlocks.POTTED_MIDNIGHT_ORCHID.get(), "Potted Midnight Orchid");
         add(FloralBlocks.POTTED_HYACINTH.get(), "Potted Hyacinth");
         add(FloralBlocks.POTTED_SPIKED_TULIP.get(), "Potted Spiked Tulip");
-        add(FloralBlocks.POTTED_STONNETE.get(), "Potted Stonette");
+        add(FloralBlocks.POTTED_STONETTE.get(), "Potted Stonette");
         add(FloralBlocks.POTTED_LUNULA.get(), "Potted Lunula");
         add(FloralBlocks.POTTED_ORANGE_COSMOS.get(), "Potted Orange Cosmos");
         add(FloralBlocks.POTTED_WHITE_COSMOS.get(), "Potted White Cosmos");

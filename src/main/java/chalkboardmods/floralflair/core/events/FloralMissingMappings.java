@@ -24,6 +24,8 @@ public class FloralMissingMappings {
                 .put(new ResourceLocation(FloralFlair.MOD_ID, "potted_sunset_poppy"), FloralBlocks.POTTED_ORANGE_COSMOS)
                 .put(new ResourceLocation(FloralFlair.MOD_ID, "snow_fall_flower"), FloralBlocks.WHITE_COSMOS)
                 .put(new ResourceLocation(FloralFlair.MOD_ID, "potted_snow_fall_flower"), FloralBlocks.WHITE_COSMOS)
+                .put(new ResourceLocation(FloralFlair.MOD_ID, "stonnete"), FloralBlocks.STONETTE)
+                .put(new ResourceLocation(FloralFlair.MOD_ID, "potted_stonnete"), FloralBlocks.POTTED_STONETTE)
                 .build();
 
         for (RegistryEvent.MissingMappings.Mapping<Block> mapping : event.getAllMappings()) {

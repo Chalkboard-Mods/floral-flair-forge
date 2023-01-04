@@ -23,7 +23,7 @@ public class FloralCompat {
         DataUtil.registerCompostable(FloralBlocks.MIDNIGHT_ORCHID.get(), 0.65f);
         DataUtil.registerCompostable(FloralBlocks.HYACINTH.get(), 0.65f);
         DataUtil.registerCompostable(FloralBlocks.SPIKED_TULIP.get(), 0.65f);
-        DataUtil.registerCompostable(FloralBlocks.STONNETE.get(), 0.65f);
+        DataUtil.registerCompostable(FloralBlocks.STONETTE.get(), 0.65f);
         DataUtil.registerCompostable(FloralBlocks.LUNULA.get(), 0.65f);
         DataUtil.registerCompostable(FloralBlocks.ORANGE_COSMOS.get(), 0.65f);
 
@@ -42,7 +42,7 @@ public class FloralCompat {
         DataUtil.registerFlammable(FloralBlocks.MIDNIGHT_ORCHID.get(), 60, 100);
         DataUtil.registerFlammable(FloralBlocks.HYACINTH.get(), 60, 100);
         DataUtil.registerFlammable(FloralBlocks.SPIKED_TULIP.get(), 60, 100);
-        DataUtil.registerFlammable(FloralBlocks.STONNETE.get(), 60, 100);
+        DataUtil.registerFlammable(FloralBlocks.STONETTE.get(), 60, 100);
         DataUtil.registerFlammable(FloralBlocks.LUNULA.get(), 60, 100);
         DataUtil.registerFlammable(FloralBlocks.ORANGE_COSMOS.get(), 60, 100);
         DataUtil.registerFlammable(FloralBlocks.WHITE_COSMOS.get(), 60, 100);
