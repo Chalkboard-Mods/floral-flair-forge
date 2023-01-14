@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "floral_flair:crafting/white_dye_from_dawn_orchid"
+    ]
+  },
+  "criteria": {
+    "has_dawn_orchid": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "floral_flair:dawn_orchid"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "floral_flair:crafting/white_dye_from_dawn_orchid"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dawn_orchid",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floral_flair:dawn_orchid"
+    }
+  ],
+  "result": {
+    "item": "minecraft:white_dye"
+  }
+}

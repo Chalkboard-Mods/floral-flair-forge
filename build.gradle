@@ -14,7 +14,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'maven-publish'
 
 version = project.version
-group = 'chalkboardmods.floralflair'
+group = 'com.chalkboardmods.floral_flair'
 archivesBaseName = 'Floral Flair'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)

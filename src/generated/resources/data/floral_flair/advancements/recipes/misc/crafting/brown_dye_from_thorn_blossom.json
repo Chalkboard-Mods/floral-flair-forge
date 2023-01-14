@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "floral_flair:crafting/brown_dye_from_thorn_blossom"
+    ]
+  },
+  "criteria": {
+    "has_thorn_blossom": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "floral_flair:thorn_blossom"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "floral_flair:crafting/brown_dye_from_thorn_blossom"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_thorn_blossom",
+      "has_the_recipe"
+    ]
+  ]
+}

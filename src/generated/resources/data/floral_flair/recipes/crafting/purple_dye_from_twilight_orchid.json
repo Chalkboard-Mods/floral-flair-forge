@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floral_flair:twilight_orchid"
+    }
+  ],
+  "result": {
+    "item": "minecraft:purple_dye"
+  }
+}
