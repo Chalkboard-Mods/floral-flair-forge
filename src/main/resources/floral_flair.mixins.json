@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.chalkboardmods.floral_flair.core.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "floral_flair.refmap.json",
+  "mixins": [
+    "FoxBehaviorGoalMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
