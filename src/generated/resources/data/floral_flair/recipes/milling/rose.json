@@ -1,0 +1,29 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "floral_flair:rose"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:red_dye",
+      "count": 2
+    },
+    {
+      "item": "minecraft:black_dye",
+      "chance": 0.1
+    },
+    {
+      "item": "minecraft:green_dye",
+      "chance": 0.05
+    }
+  ],
+  "processingTime": 50,
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ]
+}

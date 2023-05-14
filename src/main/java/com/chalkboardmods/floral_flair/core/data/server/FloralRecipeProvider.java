@@ -2,6 +2,11 @@ package com.chalkboardmods.floral_flair.core.data.server;
 
 import com.chalkboardmods.floral_flair.core.FloralFlair;
 import com.chalkboardmods.floral_flair.core.registry.FloralBlocks;
+import com.simibubi.create.AllRecipeTypes;
+import com.simibubi.create.content.contraptions.components.millstone.MillingRecipe;
+import com.simibubi.create.content.contraptions.processing.ProcessingRecipeBuilder;
+import com.simibubi.create.content.contraptions.processing.ProcessingRecipeSerializer;
+import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider.GeneratedRecipe;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -10,12 +15,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.ModLoadedCondition;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.data.builder.CuttingBoardRecipeBuilder;
 
 import java.util.function.Consumer;
+import java.util.function.Supplier;
+import java.util.function.UnaryOperator;
 
 public class FloralRecipeProvider extends RecipeProvider {
     public FloralRecipeProvider(DataGenerator pGenerator) {
@@ -70,6 +78,14 @@ public class FloralRecipeProvider extends RecipeProvider {
         createDyeFromCuttingFlowersRecipe(FloralBlocks.CHOCOLATE_COSMOS.get(), Items.BROWN_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.LUNULA.get(), Items.BLUE_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.MUSCARI.get(), Items.CYAN_DYE, consumer);
+
+        createDyeFromMillingFlowerRecipe(FloralBlocks.FOXNIP, (transform) -> transform.duration(50).output(Items.ORANGE_DYE).output(Items.WHITE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.FROSTED_FOXNIP, (transform) -> transform.duration(50).output(Items.WHITE_DYE).output(Items.LIGHT_BLUE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.PULSE_PETAL, (transform) -> transform.duration(50).output(Items.RED_DYE, 2).output(0.10F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.JUNGLE_GEM, (transform) -> transform.duration(50).output(Items.YELLOW_DYE, 2).output(0.10F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.ROSE, (transform) -> transform.duration(50).output(Items.RED_DYE, 2).output(0.10F, Items.BLACK_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.MUSCARI, (transform) -> transform.duration(50).output(Items.BLUE_DYE, 2).output(0.25F, Items.BLUE_DYE).output(0.05F, Items.BLUE_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.SCILLA, (transform) -> transform.duration(50).output(Items.LIGHT_BLUE_DYE, 2).output(0.10F, Items.LIGHT_BLUE_DYE), consumer);
     }
 
     private static void createDyeFromFlowerRecipe(ItemLike flower, ItemLike dye, int count, Consumer<FinishedRecipe> consumer) {
@@ -85,5 +101,13 @@ public class FloralRecipeProvider extends RecipeProvider {
                 .addCondition(new ModLoadedCondition("farmersdelight"))
                 .addRecipe(consumer1 -> CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(flower), Ingredient.of(ForgeTags.TOOLS_KNIVES), dye, 2).build(consumer1))
                 .build(consumer, new ResourceLocation(FloralFlair.MOD_ID, "cutting/" + getItemName(dye) + "_from_" + getItemName(flower)));
+    }
+
+    private static void createDyeFromMillingFlowerRecipe(Supplier<Block> flower, UnaryOperator<ProcessingRecipeBuilder<MillingRecipe>> transform, Consumer<FinishedRecipe> consumer) {
+        ProcessingRecipeSerializer serializer = AllRecipeTypes.MILLING.getSerializer();
+        GeneratedRecipe generatedRecipe = (consumer1) -> {
+            ((ProcessingRecipeBuilder)transform.apply(new ProcessingRecipeBuilder(serializer.getFactory(), new ResourceLocation(FloralFlair.MOD_ID, getItemName(flower.get()))).withItemIngredients(Ingredient.of(flower.get())).whenModLoaded("create"))).build(consumer1);
+        };
+        generatedRecipe.register(consumer);
     }
 }

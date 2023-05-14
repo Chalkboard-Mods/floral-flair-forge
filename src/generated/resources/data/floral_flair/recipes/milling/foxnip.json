@@ -1,0 +1,27 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "floral_flair:foxnip"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:orange_dye"
+    },
+    {
+      "item": "minecraft:white_dye"
+    },
+    {
+      "item": "minecraft:green_dye",
+      "chance": 0.05
+    }
+  ],
+  "processingTime": 50,
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ]
+}

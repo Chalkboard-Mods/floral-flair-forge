@@ -1,0 +1,29 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "floral_flair:muscari"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:blue_dye",
+      "count": 2
+    },
+    {
+      "item": "minecraft:blue_dye",
+      "chance": 0.25
+    },
+    {
+      "item": "minecraft:blue_dye",
+      "chance": 0.05
+    }
+  ],
+  "processingTime": 50,
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ]
+}
