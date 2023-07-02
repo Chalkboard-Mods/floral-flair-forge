@@ -1,24 +1,24 @@
 {
   "type": "create:milling",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
   "ingredients": [
     {
       "item": "floral_flair:pink_hyacinth"
     }
   ],
+  "processingTime": 50,
   "results": [
     {
       "item": "minecraft:pink_dye"
     },
     {
-      "item": "minecraft:green_dye",
-      "chance": 0.05
-    }
-  ],
-  "processingTime": 50,
-  "conditions": [
-    {
-      "modid": "create",
-      "type": "forge:mod_loaded"
+      "chance": 0.05,
+      "item": "minecraft:green_dye"
     }
   ]
 }

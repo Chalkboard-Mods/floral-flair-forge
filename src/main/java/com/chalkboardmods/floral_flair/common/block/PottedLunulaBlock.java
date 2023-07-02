@@ -4,6 +4,7 @@ import com.chalkboardmods.floral_flair.common.FloralProperties;
 import com.chalkboardmods.floral_flair.core.registry.FloralBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -37,7 +38,7 @@ public class PottedLunulaBlock extends FlowerPotBlock {
         world.setBlockAndUpdate(pos, FloralBlocks.LUNULA.get().defaultBlockState().setValue(TIME, getLunulaState(world)));
     }
     @Override
-    public void randomTick(BlockState state, ServerLevel world, BlockPos pos, Random random) {
+    public void randomTick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         world.setBlockAndUpdate(pos, FloralBlocks.POTTED_LUNULA.get().defaultBlockState().setValue(TIME, getLunulaState(world)));
 
 

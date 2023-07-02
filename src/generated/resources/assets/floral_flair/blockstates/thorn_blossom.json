@@ -1,10 +1,10 @@
 {
   "variants": {
-    "half=upper": {
-      "model": "floral_flair:block/thorn_blossom_top"
-    },
     "half=lower": {
       "model": "floral_flair:block/thorn_blossom_bottom"
+    },
+    "half=upper": {
+      "model": "floral_flair:block/thorn_blossom_top"
     }
   }
 }

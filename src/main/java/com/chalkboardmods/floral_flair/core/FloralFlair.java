@@ -13,12 +13,12 @@ import com.teamabnormals.blueprint.core.util.registry.RegistryHelper;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -50,17 +50,13 @@ public class FloralFlair {
         ExistingFileHelper fileHelper = event.getExistingFileHelper();
         FloralBlockTagsProvider blockTagsProvider = new FloralBlockTagsProvider(generator, fileHelper);
 
-        if (event.includeServer()) {
-            generator.addProvider(new FloralLootTableProvider(generator));
-            generator.addProvider(new FloralRecipeProvider(generator));
-            generator.addProvider(blockTagsProvider);
-            generator.addProvider(new FloralItemTagsProvider(generator, blockTagsProvider,fileHelper));
-        }
+        generator.addProvider(event.includeServer(), new FloralLootTableProvider(generator));
+        generator.addProvider(event.includeServer(), new FloralRecipeProvider(generator));
+        generator.addProvider(event.includeServer(), blockTagsProvider);
+        generator.addProvider(event.includeServer(), new FloralItemTagsProvider(generator, blockTagsProvider, fileHelper));
 
-        if (event.includeClient()) {
-            generator.addProvider(new FloralLanguageProvider(generator));
-            generator.addProvider(new FloralBlockStateProvider(generator, fileHelper));
-            generator.addProvider(new FloralItemModelProvider(generator, fileHelper));
-        }
+        generator.addProvider(event.includeClient(), new FloralLanguageProvider(generator));
+        generator.addProvider(event.includeClient(), new FloralBlockStateProvider(generator, fileHelper));
+        generator.addProvider(event.includeClient(), new FloralItemModelProvider(generator, fileHelper));
     }
 }

@@ -5,6 +5,7 @@ import com.chalkboardmods.floral_flair.core.registry.FloralBlocks;
 import com.teamabnormals.blueprint.common.block.BlueprintFlowerBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -36,7 +37,7 @@ public class LunulaBlock extends BlueprintFlowerBlock {
         world.setBlockAndUpdate(pos, FloralBlocks.LUNULA.get().defaultBlockState().setValue(FloralProperties.TIME, getLunulaState(world)));
     }
     @Override
-    public void randomTick(@NotNull BlockState state, ServerLevel world, @NotNull BlockPos pos, @NotNull Random random) {
+    public void randomTick(@NotNull BlockState state, ServerLevel world, @NotNull BlockPos pos, @NotNull RandomSource random) {
         world.setBlockAndUpdate(pos, FloralBlocks.LUNULA.get().defaultBlockState().setValue(FloralProperties.TIME, getLunulaState(world)));
     }
     private int getLunulaState(Level world) {

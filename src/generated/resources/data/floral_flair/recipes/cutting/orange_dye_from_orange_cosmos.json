@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "modid": "farmersdelight",
-          "type": "forge:mod_loaded"
+          "type": "forge:mod_loaded",
+          "modid": "farmersdelight"
         }
       ],
       "recipe": {
@@ -15,15 +15,15 @@
             "item": "floral_flair:orange_cosmos"
           }
         ],
-        "tool": {
-          "tag": "forge:tools/knives"
-        },
         "result": [
           {
-            "item": "minecraft:orange_dye",
-            "count": 2
+            "count": 2,
+            "item": "minecraft:orange_dye"
           }
-        ]
+        ],
+        "tool": {
+          "tag": "forge:tools/knives"
+        }
       }
     }
   ]
