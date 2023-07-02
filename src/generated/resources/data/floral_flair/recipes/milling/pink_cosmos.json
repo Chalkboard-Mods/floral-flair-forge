@@ -2,12 +2,12 @@
   "type": "create:milling",
   "ingredients": [
     {
-      "item": "floral_flair:muscari"
+      "item": "floral_flair:pink_cosmos"
     }
   ],
   "results": [
     {
-      "item": "minecraft:blue_dye"
+      "item": "minecraft:pink_dye"
     },
     {
       "item": "minecraft:green_dye",

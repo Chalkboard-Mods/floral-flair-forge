@@ -2,15 +2,20 @@
   "type": "create:milling",
   "ingredients": [
     {
-      "item": "floral_flair:muscari"
+      "item": "floral_flair:fairy_blossom"
     }
   ],
   "results": [
     {
-      "item": "minecraft:blue_dye"
+      "item": "minecraft:magenta_dye",
+      "count": 2
     },
     {
-      "item": "minecraft:green_dye",
+      "item": "minecraft:magenta_dye",
+      "chance": 0.25
+    },
+    {
+      "item": "minecraft:magenta_dye",
       "chance": 0.05
     }
   ],

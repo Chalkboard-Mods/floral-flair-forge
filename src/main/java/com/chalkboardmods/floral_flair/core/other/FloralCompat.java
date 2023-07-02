@@ -25,10 +25,16 @@ public class FloralCompat {
         DataUtil.registerCompostable(FloralBlocks.MORNING_ORCHID.get(), 0.65f);
         DataUtil.registerCompostable(FloralBlocks.DAWN_ORCHID.get(), 0.65f);
         DataUtil.registerCompostable(FloralBlocks.PINK_HYACINTH.get(), 0.65f);
+        DataUtil.registerCompostable(FloralBlocks.YELLOW_HYACINTH.get(), 0.65f);
+        DataUtil.registerCompostable(FloralBlocks.BLUE_HYACINTH.get(), 0.65f);
+        DataUtil.registerCompostable(FloralBlocks.BLACK_HYACINTH.get(), 0.65f);
         DataUtil.registerCompostable(FloralBlocks.THORN_BLOSSOM.get(), 0.65f);
         DataUtil.registerCompostable(FloralBlocks.STONETTE.get(), 0.65f);
         DataUtil.registerCompostable(FloralBlocks.LUNULA.get(), 0.65f);
         DataUtil.registerCompostable(FloralBlocks.ORANGE_COSMOS.get(), 0.65f);
+        DataUtil.registerCompostable(FloralBlocks.PINK_COSMOS.get(), 0.65f);
+        DataUtil.registerCompostable(FloralBlocks.WHITE_COSMOS.get(), 0.65f);
+        DataUtil.registerCompostable(FloralBlocks.CHOCOLATE_COSMOS.get(), 0.65f);
     }
 
     public static void flammability() {

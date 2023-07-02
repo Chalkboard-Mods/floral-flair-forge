@@ -2,12 +2,12 @@
   "type": "create:milling",
   "ingredients": [
     {
-      "item": "floral_flair:muscari"
+      "item": "floral_flair:twilight_orchid"
     }
   ],
   "results": [
     {
-      "item": "minecraft:blue_dye"
+      "item": "minecraft:purple_dye"
     },
     {
       "item": "minecraft:green_dye",

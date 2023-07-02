@@ -2,19 +2,15 @@
   "type": "create:milling",
   "ingredients": [
     {
-      "item": "floral_flair:muscari"
+      "item": "floral_flair:stonette"
     }
   ],
   "results": [
     {
-      "item": "minecraft:blue_dye"
-    },
-    {
-      "item": "minecraft:green_dye",
-      "chance": 0.05
+      "item": "minecraft:gray_dye"
     }
   ],
-  "processingTime": 50,
+  "processingTime": 100,
   "conditions": [
     {
       "modid": "create",

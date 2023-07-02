@@ -2,15 +2,20 @@
   "type": "create:milling",
   "ingredients": [
     {
-      "item": "floral_flair:muscari"
+      "item": "floral_flair:purpureum"
     }
   ],
   "results": [
     {
-      "item": "minecraft:blue_dye"
+      "item": "minecraft:pink_dye",
+      "count": 2
     },
     {
-      "item": "minecraft:green_dye",
+      "item": "minecraft:pink_dye",
+      "chance": 0.25
+    },
+    {
+      "item": "minecraft:red_dye",
       "chance": 0.05
     }
   ],

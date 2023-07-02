@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "floral_flair:crafting/magenta_dye_from_purpureum"
+      "floral_flair:crafting/pink_dye_from_purpureum"
     ]
   },
   "criteria": {
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "floral_flair:crafting/magenta_dye_from_purpureum"
+        "recipe": "floral_flair:crafting/pink_dye_from_purpureum"
       }
     }
   },

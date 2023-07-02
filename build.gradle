@@ -101,10 +101,9 @@ dependencies {
 
     implementation fg.deobf("com.teamabnormals:blueprint:${minecraft_version}-${blueprint_version}")
     implementation fg.deobf("curse.maven:farmersdelight-398521:3765351")
-    implementation fg.deobf("curse.maven:create-328085:4371807")
+    implementation fg.deobf("curse.maven:create-328085:4550986")
 
     runtimeOnly fg.deobf("curse.maven:jei-238222:4434393")
-    runtimeOnly fg.deobf("curse.maven:flywheel-486392:4341461")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }

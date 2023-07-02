@@ -2,19 +2,24 @@
   "type": "create:milling",
   "ingredients": [
     {
-      "item": "floral_flair:muscari"
+      "item": "floral_flair:thorn_blossom"
     }
   ],
   "results": [
     {
-      "item": "minecraft:blue_dye"
+      "item": "minecraft:brown_dye",
+      "count": 2
+    },
+    {
+      "item": "minecraft:brown_dye",
+      "chance": 0.25
     },
     {
       "item": "minecraft:green_dye",
       "chance": 0.05
     }
   ],
-  "processingTime": 50,
+  "processingTime": 100,
   "conditions": [
     {
       "modid": "create",

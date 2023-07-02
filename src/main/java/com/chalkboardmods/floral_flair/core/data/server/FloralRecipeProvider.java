@@ -3,10 +3,10 @@ package com.chalkboardmods.floral_flair.core.data.server;
 import com.chalkboardmods.floral_flair.core.FloralFlair;
 import com.chalkboardmods.floral_flair.core.registry.FloralBlocks;
 import com.simibubi.create.AllRecipeTypes;
-import com.simibubi.create.content.contraptions.components.millstone.MillingRecipe;
-import com.simibubi.create.content.contraptions.processing.ProcessingRecipeBuilder;
-import com.simibubi.create.content.contraptions.processing.ProcessingRecipeSerializer;
-import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider.GeneratedRecipe;
+import com.simibubi.create.content.kinetics.millstone.MillingRecipe;
+import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
+import com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer;
+import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -39,7 +39,7 @@ public class FloralRecipeProvider extends RecipeProvider {
         createDyeFromFlowerRecipe(FloralBlocks.JUNGLE_GEM.get(), Items.YELLOW_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.ROSE.get(), Items.RED_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.MUSCARI.get(), Items.CYAN_DYE, consumer);
-        createDyeFromFlowerRecipe(FloralBlocks.PURPUREUM.get(), Items.MAGENTA_DYE, 2, consumer);
+        createDyeFromFlowerRecipe(FloralBlocks.PURPUREUM.get(), Items.PINK_DYE, 2, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.SCILLA.get(), Items.LIGHT_BLUE_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.TWILIGHT_ORCHID.get(), Items.PURPLE_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.SUNSET_ORCHID.get(), Items.ORANGE_DYE, consumer);
@@ -82,10 +82,27 @@ public class FloralRecipeProvider extends RecipeProvider {
         createDyeFromMillingFlowerRecipe(FloralBlocks.FOXNIP, (transform) -> transform.duration(50).output(Items.ORANGE_DYE).output(Items.WHITE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
         createDyeFromMillingFlowerRecipe(FloralBlocks.FROSTED_FOXNIP, (transform) -> transform.duration(50).output(Items.WHITE_DYE).output(Items.LIGHT_BLUE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
         createDyeFromMillingFlowerRecipe(FloralBlocks.PULSE_PETAL, (transform) -> transform.duration(50).output(Items.RED_DYE, 2).output(0.10F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.FAIRY_BLOSSOM, (transform) -> transform.duration(50).output(Items.MAGENTA_DYE, 2).output(0.25F, Items.MAGENTA_DYE).output(0.05F, Items.MAGENTA_DYE), consumer);
         createDyeFromMillingFlowerRecipe(FloralBlocks.JUNGLE_GEM, (transform) -> transform.duration(50).output(Items.YELLOW_DYE, 2).output(0.10F, Items.GREEN_DYE), consumer);
         createDyeFromMillingFlowerRecipe(FloralBlocks.ROSE, (transform) -> transform.duration(50).output(Items.RED_DYE, 2).output(0.10F, Items.BLACK_DYE).output(0.05F, Items.GREEN_DYE), consumer);
-        createDyeFromMillingFlowerRecipe(FloralBlocks.MUSCARI, (transform) -> transform.duration(50).output(Items.BLUE_DYE, 2).output(0.25F, Items.BLUE_DYE).output(0.05F, Items.BLUE_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.MUSCARI, (transform) -> transform.duration(50).output(Items.BLUE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.PURPUREUM, (transform) -> transform.duration(50).output(Items.PINK_DYE, 2).output(0.25F, Items.PINK_DYE).output(0.05F, Items.RED_DYE), consumer);
         createDyeFromMillingFlowerRecipe(FloralBlocks.SCILLA, (transform) -> transform.duration(50).output(Items.LIGHT_BLUE_DYE, 2).output(0.10F, Items.LIGHT_BLUE_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.TWILIGHT_ORCHID, (transform) -> transform.duration(50).output(Items.PURPLE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.SUNSET_ORCHID, (transform) -> transform.duration(50).output(Items.ORANGE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.MORNING_ORCHID, (transform) -> transform.duration(50).output(Items.YELLOW_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.DAWN_ORCHID, (transform) -> transform.duration(50).output(Items.WHITE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.PINK_HYACINTH, (transform) -> transform.duration(50).output(Items.PINK_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.BLUE_HYACINTH, (transform) -> transform.duration(50).output(Items.BLUE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.YELLOW_HYACINTH, (transform) -> transform.duration(50).output(Items.YELLOW_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.BLACK_HYACINTH, (transform) -> transform.duration(50).output(Items.BLACK_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.THORN_BLOSSOM, (transform) -> transform.duration(100).output(Items.BROWN_DYE, 2).output(0.25F, Items.BROWN_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.STONETTE, (transform) -> transform.duration(100).output(Items.GRAY_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.ORANGE_COSMOS, (transform) -> transform.duration(50).output(Items.ORANGE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.WHITE_COSMOS, (transform) -> transform.duration(50).output(Items.WHITE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.PINK_COSMOS, (transform) -> transform.duration(50).output(Items.PINK_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.CHOCOLATE_COSMOS, (transform) -> transform.duration(50).output(Items.BROWN_DYE).output(0.05F, Items.GREEN_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.LUNULA, (transform) -> transform.duration(50).output(Items.BLUE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
     }
 
     private static void createDyeFromFlowerRecipe(ItemLike flower, ItemLike dye, int count, Consumer<FinishedRecipe> consumer) {
@@ -105,7 +122,7 @@ public class FloralRecipeProvider extends RecipeProvider {
 
     private static void createDyeFromMillingFlowerRecipe(Supplier<Block> flower, UnaryOperator<ProcessingRecipeBuilder<MillingRecipe>> transform, Consumer<FinishedRecipe> consumer) {
         ProcessingRecipeSerializer serializer = AllRecipeTypes.MILLING.getSerializer();
-        GeneratedRecipe generatedRecipe = (consumer1) -> {
+        CreateRecipeProvider.GeneratedRecipe generatedRecipe = (consumer1) -> {
             ((ProcessingRecipeBuilder)transform.apply(new ProcessingRecipeBuilder(serializer.getFactory(), new ResourceLocation(FloralFlair.MOD_ID, getItemName(flower.get()))).withItemIngredients(Ingredient.of(flower.get())).whenModLoaded("create"))).build(consumer1);
         };
         generatedRecipe.register(consumer);

@@ -2,12 +2,12 @@
   "type": "create:milling",
   "ingredients": [
     {
-      "item": "floral_flair:muscari"
+      "item": "floral_flair:black_hyacinth"
     }
   ],
   "results": [
     {
-      "item": "minecraft:blue_dye"
+      "item": "minecraft:black_dye"
     },
     {
       "item": "minecraft:green_dye",
