@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#floral_flair:orchids_generate_in",
+  "features": "floral_flair:flower_morning_orchid",
+  "step": "vegetal_decoration"
+}

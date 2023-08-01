@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#floral_flair:frosted_foxnip_generates_in",
+  "features": "floral_flair:flower_frosted_foxnip",
+  "step": "vegetal_decoration"
+}

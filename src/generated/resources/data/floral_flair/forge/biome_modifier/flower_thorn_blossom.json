@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#floral_flair:thorn_blossoms_generate_in",
+  "features": "floral_flair:flower_thorn_blossom",
+  "step": "vegetal_decoration"
+}

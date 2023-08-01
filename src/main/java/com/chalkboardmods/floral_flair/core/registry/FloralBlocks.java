@@ -48,7 +48,7 @@ public class FloralBlocks {
     public static final RegistryObject<Block> BLACK_HYACINTH = HELPER.createBlock("black_hyacinth", () -> new BlueprintFlowerBlock(() -> MobEffects.BLINDNESS, 5, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> THORN_BLOSSOM = HELPER.createBlock("thorn_blossom", () -> new ThornBlossomBlock(PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> STONETTE = HELPER.createBlock("stonette", () -> new StonetteBlock(() -> MobEffects.DIG_SPEED, 6, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> LUNULA = HELPER.createBlock("lunula", () -> new LunulaBlock(() -> MobEffects.GLOWING, 10, Properties.LUNULA.lightLevel(createLightLevelFromTimeBlockState(5))), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> LUNULA = HELPER.createBlock("lunula", () -> new LunulaBlock(() -> MobEffects.GLOWING, 10, Properties.LUNULA), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> ORANGE_COSMOS = HELPER.createBlock("orange_cosmos", () -> new BlueprintFlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 9, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> WHITE_COSMOS = HELPER.createBlock("white_cosmos", () -> new BlueprintFlowerBlock(() -> MobEffects.SLOW_FALLING, 7, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> PINK_COSMOS = HELPER.createBlock("pink_cosmos", () -> new BlueprintFlowerBlock(() -> MobEffects.INVISIBILITY, 4, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
@@ -71,7 +71,7 @@ public class FloralBlocks {
     public static final RegistryObject<Block> POTTED_YELLOW_HYACINTH = HELPER.createBlockNoItem("potted_yellow_hyacinth", () -> new FlowerPotBlock(YELLOW_HYACINTH.get(), PropertyUtil.flowerPot()));
     public static final RegistryObject<Block> POTTED_BLACK_HYACINTH = HELPER.createBlockNoItem("potted_black_hyacinth", () -> new FlowerPotBlock(BLACK_HYACINTH.get(), PropertyUtil.flowerPot()));
     public static final RegistryObject<Block> POTTED_STONETTE = HELPER.createBlockNoItem("potted_stonette", () -> new FlowerPotBlock(STONETTE.get(), PropertyUtil.flowerPot()));
-    public static final RegistryObject<Block> POTTED_LUNULA = HELPER.createBlockNoItem("potted_lunula", () -> new PottedLunulaBlock(LUNULA.get(), Properties.POTTED_LUNULA.lightLevel(createLightLevelFromTimeBlockState(5))));
+    public static final RegistryObject<Block> POTTED_LUNULA = HELPER.createBlockNoItem("potted_lunula", () -> new PottedLunulaBlock(LUNULA.get(), Properties.POTTED_LUNULA));
     public static final RegistryObject<Block> POTTED_ORANGE_COSMOS = HELPER.createBlockNoItem("potted_orange_cosmos", () -> new FlowerPotBlock(ORANGE_COSMOS.get(), PropertyUtil.flowerPot()));
     public static final RegistryObject<Block> POTTED_WHITE_COSMOS = HELPER.createBlockNoItem("potted_white_cosmos", () -> new FlowerPotBlock(WHITE_COSMOS.get(), PropertyUtil.flowerPot()));
     public static final RegistryObject<Block> POTTED_PINK_COSMOS = HELPER.createBlockNoItem("potted_pink_cosmos", () -> new FlowerPotBlock(PINK_COSMOS.get(), PropertyUtil.flowerPot()));
@@ -79,7 +79,7 @@ public class FloralBlocks {
     public static final RegistryObject<Block> POTTED_MUSCARI = HELPER.createBlockNoItem("potted_muscari", () -> new FlowerPotBlock(MUSCARI.get(), PropertyUtil.flowerPot()));
 
     public static class Properties {
-        public static final BlockBehaviour.Properties LUNULA = Block.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS).lightLevel(createLightLevelFromTimeBlockState(5));
+        public static final BlockBehaviour.Properties LUNULA = Block.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS).lightLevel(createLightLevelFromTimeBlockState(5)).offsetType(BlockBehaviour.OffsetType.XZ);
         public static final BlockBehaviour.Properties POTTED_LUNULA = Block.Properties.of(Material.DECORATION).instabreak().noOcclusion().lightLevel(createLightLevelFromTimeBlockState(5));
     }
 }

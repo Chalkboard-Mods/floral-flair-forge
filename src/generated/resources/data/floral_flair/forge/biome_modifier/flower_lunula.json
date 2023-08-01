@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#floral_flair:lunula_generates_in",
+  "features": "floral_flair:flower_lunula",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#floral_flair:fairy_blossom_generates_in",
+  "features": "floral_flair:flower_fairy_blossom",
+  "step": "vegetal_decoration"
+}

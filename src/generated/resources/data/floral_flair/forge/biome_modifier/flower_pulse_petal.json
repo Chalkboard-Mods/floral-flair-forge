@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#floral_flair:pulse_petal_generates_in",
+  "features": "floral_flair:flower_pulse_petal",
+  "step": "vegetal_decoration"
+}

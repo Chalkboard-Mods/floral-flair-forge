@@ -74,14 +74,14 @@ public class FloralBlockStateProvider extends BlockStateProvider {
     }
 
     public void crossModelBlock(Supplier<? extends Block> block) {
-        ModelFile file = models().cross(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
+        ModelFile file = models().cross(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath())).renderType("cutout");
 
         simpleBlock(block.get(), file);
     }
 
     public void tallFlowerBlock(Supplier<? extends Block> block) {
-        ModelFile top = models().cross(ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_top", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_top"));
-        ModelFile bottom = models().cross(ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom"));
+        ModelFile top = models().cross(ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_top", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_top")).renderType("cutout");
+        ModelFile bottom = models().cross(ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom")).renderType("cutout");
 
         getVariantBuilder(block.get()).forAllStates((blockState) -> {
             ModelFile file;
@@ -101,10 +101,10 @@ public class FloralBlockStateProvider extends BlockStateProvider {
     public void lunulaBlock() {
         Block block = FloralBlocks.LUNULA.get();
 
-        ModelFile lunula = models().cross(ForgeRegistries.BLOCKS.getKey(block).getPath(), new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
-        ModelFile open_0 = models().cross(ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_0", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_0"));
-        ModelFile open_1 = models().cross(ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_1", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_1"));
-        ModelFile open_2 = models().cross(ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_2", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_2"));
+        ModelFile lunula = models().cross(ForgeRegistries.BLOCKS.getKey(block).getPath(), new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block).getPath())).renderType("cutout");
+        ModelFile open_0 = models().cross(ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_0", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_0")).renderType("cutout");
+        ModelFile open_1 = models().cross(ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_1", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_1")).renderType("cutout");
+        ModelFile open_2 = models().cross(ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_2", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_2")).renderType("cutout");
 
         getVariantBuilder(block).forAllStates((state) -> {
             ModelFile file = null;
@@ -132,7 +132,7 @@ public class FloralBlockStateProvider extends BlockStateProvider {
     public void pottedFlowerBlock(Supplier<? extends Block> potBlock) {
         Supplier<FlowerPotBlock> block = () -> (FlowerPotBlock) potBlock.get();
 
-        ModelFile file = models().withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), "minecraft:block/flower_pot_cross").texture("plant", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.get().getContent()).getPath()));
+        ModelFile file = models().withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), "minecraft:block/flower_pot_cross").texture("plant", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.get().getContent()).getPath())).renderType("cutout");
 
         simpleBlock(block.get(), file);
     }
@@ -140,12 +140,10 @@ public class FloralBlockStateProvider extends BlockStateProvider {
     public void pottedLunulaBlock() {
         FlowerPotBlock block = (FlowerPotBlock) FloralBlocks.POTTED_LUNULA.get();
 
-        ModelFile lunula = models().withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(), "minecraft:block/flower_pot_cross").texture("plant", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.getContent()).getPath()));
-        ModelFile open_0 = models().withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_0", "minecraft:block/flower_pot_cross").texture("plant", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.getContent()).getPath() + "_open_0"));
-        ModelFile open_1 = models().withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_1", "minecraft:block/flower_pot_cross").texture("plant", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.getContent()).getPath() + "_open_1"));
-        ModelFile open_2 = models().withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_2", "minecraft:block/flower_pot_cross").texture("plant", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.getContent()).getPath() + "_open_2"));
-
-
+        ModelFile lunula = models().withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(), "minecraft:block/flower_pot_cross").texture("plant", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.getContent()).getPath())).renderType("cutout");
+        ModelFile open_0 = models().withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_0", "minecraft:block/flower_pot_cross").texture("plant", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.getContent()).getPath() + "_open_0")).renderType("cutout");
+        ModelFile open_1 = models().withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_1", "minecraft:block/flower_pot_cross").texture("plant", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.getContent()).getPath() + "_open_1")).renderType("cutout");
+        ModelFile open_2 = models().withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath() + "_open_2", "minecraft:block/flower_pot_cross").texture("plant", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block.getContent()).getPath() + "_open_2")).renderType("cutout");
 
         getVariantBuilder(block).forAllStates((state) -> {
             ModelFile file = null;

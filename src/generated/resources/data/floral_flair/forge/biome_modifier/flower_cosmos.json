@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#floral_flair:cosmos_generate_in",
+  "features": "floral_flair:flower_cosmos",
+  "step": "vegetal_decoration"
+}

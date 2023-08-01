@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#floral_flair:stonette_generates_in",
+  "features": "floral_flair:flower_stonette",
+  "step": "vegetal_decoration"
+}

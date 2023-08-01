@@ -8,7 +8,7 @@ version="${file.jarVersion}"
 displayName="Floral Flair"
 logoFile="floral.png"
 description='''
-A mod that adds lovely new flowers to your minecraft world!
+A mod that adds lovely new flowers to your Minecraft world!
 '''
 [[dependencies.floral_flair]]
     modId="forge"
