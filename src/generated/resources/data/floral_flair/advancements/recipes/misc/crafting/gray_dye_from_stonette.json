@@ -30,5 +30,6 @@
     "recipes": [
       "floral_flair:crafting/gray_dye_from_stonette"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

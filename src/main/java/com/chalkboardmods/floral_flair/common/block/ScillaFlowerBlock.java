@@ -1,17 +1,17 @@
 package com.chalkboardmods.floral_flair.common.block;
 
-import com.teamabnormals.blueprint.common.block.BlueprintFlowerBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.function.Supplier;
 
-public class ScillaFlowerBlock extends BlueprintFlowerBlock {
+public class ScillaFlowerBlock extends FlowerBlock {
     public ScillaFlowerBlock(Supplier<MobEffect> stewEffect, int stewEffectDuration, Properties properties) {
         super(stewEffect, stewEffectDuration, properties);
     }

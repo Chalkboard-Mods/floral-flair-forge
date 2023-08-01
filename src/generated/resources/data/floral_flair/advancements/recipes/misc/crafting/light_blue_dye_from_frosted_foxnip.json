@@ -30,5 +30,6 @@
     "recipes": [
       "floral_flair:crafting/light_blue_dye_from_frosted_foxnip"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "floral_flair:crafting/red_dye_from_pulse_petal"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -2,19 +2,22 @@ package com.chalkboardmods.floral_flair.core.data.server.tags;
 
 import com.chalkboardmods.floral_flair.core.FloralFlair;
 import com.chalkboardmods.floral_flair.core.registry.FloralBlocks;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.concurrent.CompletableFuture;
+
 public class FloralBlockTagsProvider extends BlockTagsProvider {
-    public FloralBlockTagsProvider(DataGenerator generator, @Nullable ExistingFileHelper fileHelper) {
-        super(generator, FloralFlair.MOD_ID, fileHelper);
+    public FloralBlockTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper fileHelper) {
+        super(output, lookupProvider, FloralFlair.MOD_ID, fileHelper);
     }
 
     @Override
-    protected void addTags() {
+    protected void addTags(HolderLookup.Provider var) {
         tag(BlockTags.SMALL_FLOWERS).add(
                 FloralBlocks.FOXNIP.get(),
                 FloralBlocks.FROSTED_FOXNIP.get(),

@@ -2,7 +2,9 @@ package com.chalkboardmods.floral_flair.core.data.server.tags;
 
 import com.chalkboardmods.floral_flair.core.FloralFlair;
 import com.chalkboardmods.floral_flair.core.other.FloralTags;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.BiomeTagsProvider;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biomes;
@@ -10,13 +12,16 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.concurrent.CompletableFuture;
+
 public class FloralBiomeTagsProvider extends BiomeTagsProvider {
-    public FloralBiomeTagsProvider(DataGenerator generator, @Nullable ExistingFileHelper fileHelper) {
-        super(generator, FloralFlair.MOD_ID, fileHelper);
+
+    public FloralBiomeTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, lookup, FloralFlair.MOD_ID, existingFileHelper);
     }
 
     @Override
-    protected void addTags() {
+    protected void addTags(HolderLookup.Provider pProvider) {
         tag(FloralTags.BiomeTags.FOXNIP_BIOMES).add(
                 Biomes.TAIGA,
                 Biomes.OLD_GROWTH_SPRUCE_TAIGA,

@@ -2,7 +2,6 @@ package com.chalkboardmods.floral_flair.common.block;
 
 import com.chalkboardmods.floral_flair.common.FloralProperties;
 import com.chalkboardmods.floral_flair.core.registry.FloralBlocks;
-import com.teamabnormals.blueprint.common.block.BlueprintFlowerBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -11,15 +10,15 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
-import java.util.Random;
 import java.util.function.Supplier;
 
-public class LunulaBlock extends BlueprintFlowerBlock {
+public class LunulaBlock extends FlowerBlock {
     public LunulaBlock(Supplier<MobEffect> stewEffect, int stewEffectDuration, Properties properties) {
         super(stewEffect, stewEffectDuration, properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FloralProperties.TIME, 0));

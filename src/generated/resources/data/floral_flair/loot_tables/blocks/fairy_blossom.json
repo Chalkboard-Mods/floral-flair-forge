@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:block",
+  "type": "minecraft:empty",
   "pools": [
     {
       "bonus_rolls": 0.0,
@@ -25,5 +25,6 @@
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "floral_flair:blocks/fairy_blossom"
 }

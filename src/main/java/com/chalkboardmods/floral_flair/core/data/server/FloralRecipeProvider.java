@@ -7,8 +7,9 @@ import com.simibubi.create.content.kinetics.millstone.MillingRecipe;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer;
 import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
@@ -26,12 +27,12 @@ import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
 public class FloralRecipeProvider extends RecipeProvider {
-    public FloralRecipeProvider(DataGenerator pGenerator) {
-        super(pGenerator);
+    public FloralRecipeProvider(PackOutput pOutput) {
+        super(pOutput);
     }
 
     @Override
-    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         createDyeFromFlowerRecipe(FloralBlocks.FOXNIP.get(), Items.ORANGE_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.FROSTED_FOXNIP.get(), Items.LIGHT_BLUE_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.PULSE_PETAL.get(), Items.RED_DYE, consumer);
@@ -106,7 +107,7 @@ public class FloralRecipeProvider extends RecipeProvider {
     }
 
     private static void createDyeFromFlowerRecipe(ItemLike flower, ItemLike dye, int count, Consumer<FinishedRecipe> consumer) {
-        ShapelessRecipeBuilder.shapeless(dye, count).requires(flower).unlockedBy(getHasName(flower), has(flower)).save(consumer, new ResourceLocation(FloralFlair.MOD_ID, "crafting/" + getItemName(dye) + "_from_" + getItemName(flower)));
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, dye, count).requires(flower).unlockedBy(getHasName(flower), has(flower)).save(consumer, new ResourceLocation(FloralFlair.MOD_ID, "crafting/" + getItemName(dye) + "_from_" + getItemName(flower)));
     }
 
     private static void createDyeFromFlowerRecipe(ItemLike flower, ItemLike dye, Consumer<FinishedRecipe> consumer) {

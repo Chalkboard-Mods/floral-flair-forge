@@ -1,7 +1,5 @@
 package com.chalkboardmods.floral_flair.common.block;
 
-
-import com.teamabnormals.blueprint.core.util.item.filling.TargetedItemCategoryFiller;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.NonNullList;
@@ -33,7 +31,6 @@ import org.jetbrains.annotations.Nullable;
 
 public class ThornBlossomBlock extends BushBlock implements BonemealableBlock {
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
-    private static final TargetedItemCategoryFiller FILLER = new TargetedItemCategoryFiller(() -> Items.PEONY);
 
     public ThornBlossomBlock(Properties properties) {
         super(properties);
@@ -138,7 +135,7 @@ public class ThornBlossomBlock extends BushBlock implements BonemealableBlock {
     }
 
     @Override
-    public boolean isValidBonemealTarget(@NotNull BlockGetter getter, @NotNull BlockPos pos, @NotNull BlockState state, boolean isClient) {
+    public boolean isValidBonemealTarget(@NotNull LevelReader levelReader, @NotNull BlockPos blockPos, @NotNull BlockState blockState, boolean b) {
         return true;
     }
 
@@ -157,8 +154,4 @@ public class ThornBlossomBlock extends BushBlock implements BonemealableBlock {
         return null;
     }
 
-    @Override
-    public void fillItemCategory(@NotNull CreativeModeTab group, @NotNull NonNullList<ItemStack> items) {
-        FILLER.fillItem(this.asItem(), group, items);
-    }
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "floral_flair:crafting/orange_dye_from_foxnip"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

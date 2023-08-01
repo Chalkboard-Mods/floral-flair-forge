@@ -30,5 +30,6 @@
     "recipes": [
       "floral_flair:crafting/blue_dye_from_blue_hyacinth"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

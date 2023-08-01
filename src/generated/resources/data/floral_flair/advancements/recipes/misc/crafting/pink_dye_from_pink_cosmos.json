@@ -30,5 +30,6 @@
     "recipes": [
       "floral_flair:crafting/pink_dye_from_pink_cosmos"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

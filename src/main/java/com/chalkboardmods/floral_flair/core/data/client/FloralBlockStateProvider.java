@@ -4,6 +4,7 @@ import com.chalkboardmods.floral_flair.common.FloralProperties;
 import com.chalkboardmods.floral_flair.core.FloralFlair;
 import com.chalkboardmods.floral_flair.core.registry.FloralBlocks;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoublePlantBlock;
@@ -19,8 +20,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.function.Supplier;
 
 public class FloralBlockStateProvider extends BlockStateProvider {
-    public FloralBlockStateProvider(DataGenerator generator, ExistingFileHelper fileHelper) {
-        super(generator, FloralFlair.MOD_ID, fileHelper);
+    public FloralBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, FloralFlair.MOD_ID, exFileHelper);
     }
 
     @Override

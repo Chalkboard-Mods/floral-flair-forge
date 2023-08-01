@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[40,)"
+loaderVersion="[47,)"
 license="Apache-2.0"
 
 [[mods]]
@@ -13,18 +13,18 @@ A mod that adds lovely new flowers to your Minecraft world!
 [[dependencies.floral_flair]]
     modId="forge"
     mandatory=true
-    versionRange="[43,)"
+    versionRange="[47,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.floral_flair]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.2,1.19.3)"
+    versionRange="[1.20.1,1.21)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.floral_flair]]
     modId = "blueprint"
 mandatory = true
-    versionRange = "[1.19.2-6.1.2,)"
+    versionRange = "[1.20.1-7.0.0,)"
     ordering = "BEFORE"
     side = "BOTH"

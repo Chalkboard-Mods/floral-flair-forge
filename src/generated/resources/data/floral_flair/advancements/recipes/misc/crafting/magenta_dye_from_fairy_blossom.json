@@ -30,5 +30,6 @@
     "recipes": [
       "floral_flair:crafting/magenta_dye_from_fairy_blossom"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -3,11 +3,12 @@ package com.chalkboardmods.floral_flair.core.data.client;
 import com.chalkboardmods.floral_flair.core.FloralFlair;
 import com.chalkboardmods.floral_flair.core.registry.FloralBlocks;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
 public class FloralLanguageProvider extends LanguageProvider {
-    public FloralLanguageProvider(DataGenerator generator) {
-        super(generator, FloralFlair.MOD_ID, "en_us");
+    public FloralLanguageProvider(PackOutput packOutput) {
+        super(packOutput, FloralFlair.MOD_ID, "en_us");
     }
 
     @Override

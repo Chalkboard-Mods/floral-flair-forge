@@ -3,6 +3,7 @@ package com.chalkboardmods.floral_flair.core.data.client;
 import com.chalkboardmods.floral_flair.core.FloralFlair;
 import com.chalkboardmods.floral_flair.core.registry.FloralBlocks;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -12,8 +13,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.function.Supplier;
 
 public class FloralItemModelProvider extends ItemModelProvider {
-    public FloralItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, FloralFlair.MOD_ID, existingFileHelper);
+    public FloralItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, FloralFlair.MOD_ID, existingFileHelper);
     }
 
     @Override

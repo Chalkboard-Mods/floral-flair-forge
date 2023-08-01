@@ -10,25 +10,25 @@
             "entries": [
               {
                 "data": {
-                  "Name": "floral_flair:chocolate_cosmos"
-                },
-                "weight": 1
-              },
-              {
-                "data": {
                   "Name": "floral_flair:pink_cosmos"
                 },
                 "weight": 3
               },
               {
                 "data": {
-                  "Name": "floral_flair:orange_cosmos"
+                  "Name": "floral_flair:chocolate_cosmos"
+                },
+                "weight": 1
+              },
+              {
+                "data": {
+                  "Name": "floral_flair:white_cosmos"
                 },
                 "weight": 3
               },
               {
                 "data": {
-                  "Name": "floral_flair:white_cosmos"
+                  "Name": "floral_flair:orange_cosmos"
                 },
                 "weight": 3
               }

@@ -30,5 +30,6 @@
     "recipes": [
       "floral_flair:crafting/brown_dye_from_thorn_blossom"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

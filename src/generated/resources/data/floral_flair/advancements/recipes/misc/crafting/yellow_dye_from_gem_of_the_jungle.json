@@ -30,5 +30,6 @@
     "recipes": [
       "floral_flair:crafting/yellow_dye_from_gem_of_the_jungle"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

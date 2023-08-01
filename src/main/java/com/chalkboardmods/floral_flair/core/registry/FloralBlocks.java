@@ -3,18 +3,13 @@ package com.chalkboardmods.floral_flair.core.registry;
 import com.chalkboardmods.floral_flair.common.FloralProperties;
 import com.chalkboardmods.floral_flair.common.block.*;
 import com.chalkboardmods.floral_flair.core.FloralFlair;
-import com.teamabnormals.blueprint.common.block.BlueprintFlowerBlock;
-import com.teamabnormals.blueprint.common.block.BlueprintTallFlowerBlock;
 import com.teamabnormals.blueprint.core.util.PropertyUtil;
 import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -29,30 +24,30 @@ public class FloralBlocks {
     //Flowers
     public static final BlockSubRegistryHelper HELPER = FloralFlair.REGISTRY_HELPER.getBlockSubHelper();
 
-    public static final RegistryObject<Block> FOXNIP = HELPER.createBlock("foxnip", () -> new BlueprintFlowerBlock(() -> MobEffects.MOVEMENT_SLOWDOWN, 8, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> FROSTED_FOXNIP = HELPER.createBlock("frosted_foxnip", () -> new BlueprintFlowerBlock(() -> MobEffects.MOVEMENT_SLOWDOWN, 5, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> PULSE_PETAL = HELPER.createBlock("pulse_petal", () -> new BlueprintFlowerBlock(() -> MobEffects.HEALTH_BOOST, 8, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> FAIRY_BLOSSOM = HELPER.createBlock("fairy_blossom", () -> new BlueprintTallFlowerBlock(PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> JUNGLE_GEM = HELPER.createBlock("gem_of_the_jungle", () -> new BlueprintFlowerBlock(() -> MobEffects.GLOWING, 10, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> ROSE = HELPER.createBlock("rose", () -> new BlueprintFlowerBlock(() -> MobEffects.REGENERATION, 9, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> MUSCARI = HELPER.createBlock("muscari", () -> new BlueprintFlowerBlock(() -> MobEffects.HUNGER, 8, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> PURPUREUM = HELPER.createBlock("purpureum", () -> new BlueprintTallFlowerBlock(PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> SCILLA = HELPER.createBlock("scilla", () -> new ScillaFlowerBlock(() -> MobEffects.WEAKNESS, 6, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> TWILIGHT_ORCHID = HELPER.createBlock("twilight_orchid", () -> new BlueprintFlowerBlock(() -> MobEffects.NIGHT_VISION, 4, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> SUNSET_ORCHID = HELPER.createBlock("sunset_orchid", () -> new BlueprintFlowerBlock(() -> MobEffects.ABSORPTION, 3, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> MORNING_ORCHID = HELPER.createBlock("morning_orchid", () -> new BlueprintFlowerBlock(() -> MobEffects.CONFUSION, 5, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> DAWN_ORCHID = HELPER.createBlock("dawn_orchid", () -> new BlueprintFlowerBlock(() -> MobEffects.DAMAGE_RESISTANCE, 6, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> PINK_HYACINTH = HELPER.createBlock("pink_hyacinth", () -> new BlueprintFlowerBlock(() -> MobEffects.DIG_SLOWDOWN, 5, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> BLUE_HYACINTH = HELPER.createBlock("blue_hyacinth", () -> new BlueprintFlowerBlock(() -> MobEffects.WATER_BREATHING, 5, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> YELLOW_HYACINTH = HELPER.createBlock("yellow_hyacinth", () -> new BlueprintFlowerBlock(() -> MobEffects.SATURATION, 2, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> BLACK_HYACINTH = HELPER.createBlock("black_hyacinth", () -> new BlueprintFlowerBlock(() -> MobEffects.BLINDNESS, 5, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> THORN_BLOSSOM = HELPER.createBlock("thorn_blossom", () -> new ThornBlossomBlock(PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> STONETTE = HELPER.createBlock("stonette", () -> new StonetteBlock(() -> MobEffects.DIG_SPEED, 6, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> LUNULA = HELPER.createBlock("lunula", () -> new LunulaBlock(() -> MobEffects.GLOWING, 10, Properties.LUNULA), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> ORANGE_COSMOS = HELPER.createBlock("orange_cosmos", () -> new BlueprintFlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 9, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> WHITE_COSMOS = HELPER.createBlock("white_cosmos", () -> new BlueprintFlowerBlock(() -> MobEffects.SLOW_FALLING, 7, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> PINK_COSMOS = HELPER.createBlock("pink_cosmos", () -> new BlueprintFlowerBlock(() -> MobEffects.INVISIBILITY, 4, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> CHOCOLATE_COSMOS = HELPER.createBlock("chocolate_cosmos", () -> new BlueprintFlowerBlock(() -> MobEffects.NIGHT_VISION, 12, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> FOXNIP = HELPER.createBlock("foxnip", () -> new FlowerBlock(() -> MobEffects.MOVEMENT_SLOWDOWN, 8, PropertyUtil.flower()));
+    public static final RegistryObject<Block> FROSTED_FOXNIP = HELPER.createBlock("frosted_foxnip", () -> new FlowerBlock(() -> MobEffects.MOVEMENT_SLOWDOWN, 5, PropertyUtil.flower()));
+    public static final RegistryObject<Block> PULSE_PETAL = HELPER.createBlock("pulse_petal", () -> new FlowerBlock(() -> MobEffects.HEALTH_BOOST, 8, PropertyUtil.flower()));
+    public static final RegistryObject<Block> FAIRY_BLOSSOM = HELPER.createBlock("fairy_blossom", () -> new TallFlowerBlock(PropertyUtil.flower()));
+    public static final RegistryObject<Block> JUNGLE_GEM = HELPER.createBlock("gem_of_the_jungle", () -> new FlowerBlock(() -> MobEffects.GLOWING, 10, PropertyUtil.flower()));
+    public static final RegistryObject<Block> ROSE = HELPER.createBlock("rose", () -> new FlowerBlock(() -> MobEffects.REGENERATION, 9, PropertyUtil.flower()));
+    public static final RegistryObject<Block> MUSCARI = HELPER.createBlock("muscari", () -> new FlowerBlock(() -> MobEffects.HUNGER, 8, PropertyUtil.flower()));
+    public static final RegistryObject<Block> PURPUREUM = HELPER.createBlock("purpureum", () -> new TallFlowerBlock(PropertyUtil.flower()));
+    public static final RegistryObject<Block> SCILLA = HELPER.createBlock("scilla", () -> new ScillaFlowerBlock(() -> MobEffects.WEAKNESS, 6, PropertyUtil.flower()));
+    public static final RegistryObject<Block> TWILIGHT_ORCHID = HELPER.createBlock("twilight_orchid", () -> new FlowerBlock(() -> MobEffects.NIGHT_VISION, 4, PropertyUtil.flower()));
+    public static final RegistryObject<Block> SUNSET_ORCHID = HELPER.createBlock("sunset_orchid", () -> new FlowerBlock(() -> MobEffects.ABSORPTION, 3, PropertyUtil.flower()));
+    public static final RegistryObject<Block> MORNING_ORCHID = HELPER.createBlock("morning_orchid", () -> new FlowerBlock(() -> MobEffects.CONFUSION, 5, PropertyUtil.flower()));
+    public static final RegistryObject<Block> DAWN_ORCHID = HELPER.createBlock("dawn_orchid", () -> new FlowerBlock(() -> MobEffects.DAMAGE_RESISTANCE, 6, PropertyUtil.flower()));
+    public static final RegistryObject<Block> PINK_HYACINTH = HELPER.createBlock("pink_hyacinth", () -> new FlowerBlock(() -> MobEffects.DIG_SLOWDOWN, 5, PropertyUtil.flower()));
+    public static final RegistryObject<Block> BLUE_HYACINTH = HELPER.createBlock("blue_hyacinth", () -> new FlowerBlock(() -> MobEffects.WATER_BREATHING, 5, PropertyUtil.flower()));
+    public static final RegistryObject<Block> YELLOW_HYACINTH = HELPER.createBlock("yellow_hyacinth", () -> new FlowerBlock(() -> MobEffects.SATURATION, 2, PropertyUtil.flower()));
+    public static final RegistryObject<Block> BLACK_HYACINTH = HELPER.createBlock("black_hyacinth", () -> new FlowerBlock(() -> MobEffects.BLINDNESS, 5, PropertyUtil.flower()));
+    public static final RegistryObject<Block> THORN_BLOSSOM = HELPER.createBlock("thorn_blossom", () -> new ThornBlossomBlock(PropertyUtil.flower()));
+    public static final RegistryObject<Block> STONETTE = HELPER.createBlock("stonette", () -> new StonetteBlock(() -> MobEffects.DIG_SPEED, 6, PropertyUtil.flower()));
+    public static final RegistryObject<Block> LUNULA = HELPER.createBlock("lunula", () -> new LunulaBlock(() -> MobEffects.GLOWING, 10, Properties.LUNULA));
+    public static final RegistryObject<Block> ORANGE_COSMOS = HELPER.createBlock("orange_cosmos", () -> new FlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 9, PropertyUtil.flower()));
+    public static final RegistryObject<Block> WHITE_COSMOS = HELPER.createBlock("white_cosmos", () -> new FlowerBlock(() -> MobEffects.SLOW_FALLING, 7, PropertyUtil.flower()));
+    public static final RegistryObject<Block> PINK_COSMOS = HELPER.createBlock("pink_cosmos", () -> new FlowerBlock(() -> MobEffects.INVISIBILITY, 4, PropertyUtil.flower()));
+    public static final RegistryObject<Block> CHOCOLATE_COSMOS = HELPER.createBlock("chocolate_cosmos", () -> new FlowerBlock(() -> MobEffects.NIGHT_VISION, 12, PropertyUtil.flower()));
 
 
     //Potted Flowers
@@ -79,7 +74,7 @@ public class FloralBlocks {
     public static final RegistryObject<Block> POTTED_MUSCARI = HELPER.createBlockNoItem("potted_muscari", () -> new FlowerPotBlock(MUSCARI.get(), PropertyUtil.flowerPot()));
 
     public static class Properties {
-        public static final BlockBehaviour.Properties LUNULA = Block.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS).lightLevel(createLightLevelFromTimeBlockState(5)).offsetType(BlockBehaviour.OffsetType.XZ);
-        public static final BlockBehaviour.Properties POTTED_LUNULA = Block.Properties.of(Material.DECORATION).instabreak().noOcclusion().lightLevel(createLightLevelFromTimeBlockState(5));
+        public static final BlockBehaviour.Properties LUNULA = BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).lightLevel(createLightLevelFromTimeBlockState(5)).offsetType(BlockBehaviour.OffsetType.XZ);
+        public static final BlockBehaviour.Properties POTTED_LUNULA = BlockBehaviour.Properties.of().instabreak().noOcclusion().lightLevel(createLightLevelFromTimeBlockState(5));
     }
 }
