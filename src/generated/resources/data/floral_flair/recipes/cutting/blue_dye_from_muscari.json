@@ -12,13 +12,13 @@
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "item": "floral_flair:stonette"
+            "item": "floral_flair:muscari"
           }
         ],
         "result": [
           {
             "count": 2,
-            "item": "minecraft:gray_dye"
+            "item": "minecraft:blue_dye"
           }
         ],
         "tool": {

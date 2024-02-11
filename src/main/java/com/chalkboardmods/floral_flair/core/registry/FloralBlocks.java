@@ -42,7 +42,7 @@ public class FloralBlocks {
     public static final RegistryObject<Block> YELLOW_HYACINTH = HELPER.createBlock("yellow_hyacinth", () -> new FlowerBlock(() -> MobEffects.SATURATION, 2, PropertyUtil.flower()));
     public static final RegistryObject<Block> BLACK_HYACINTH = HELPER.createBlock("black_hyacinth", () -> new FlowerBlock(() -> MobEffects.BLINDNESS, 5, PropertyUtil.flower()));
     public static final RegistryObject<Block> THORN_BLOSSOM = HELPER.createBlock("thorn_blossom", () -> new ThornBlossomBlock(PropertyUtil.flower()));
-    public static final RegistryObject<Block> STONETTE = HELPER.createBlock("stonette", () -> new StonetteBlock(() -> MobEffects.DIG_SPEED, 6, PropertyUtil.flower()));
+    public static final RegistryObject<Block> STONETTE = HELPER.createBlock("stonette", () -> new StonetteBlock(() -> MobEffects.DIG_SPEED, 6, PropertyUtil.flower().sound(SoundType.AMETHYST_CLUSTER)));
     public static final RegistryObject<Block> LUNULA = HELPER.createBlock("lunula", () -> new LunulaBlock(() -> MobEffects.GLOWING, 10, Properties.LUNULA));
     public static final RegistryObject<Block> ORANGE_COSMOS = HELPER.createBlock("orange_cosmos", () -> new FlowerBlock(() -> MobEffects.FIRE_RESISTANCE, 9, PropertyUtil.flower()));
     public static final RegistryObject<Block> WHITE_COSMOS = HELPER.createBlock("white_cosmos", () -> new FlowerBlock(() -> MobEffects.SLOW_FALLING, 7, PropertyUtil.flower()));

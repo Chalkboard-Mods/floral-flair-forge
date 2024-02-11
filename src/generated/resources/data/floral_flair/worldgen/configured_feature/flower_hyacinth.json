@@ -10,18 +10,6 @@
             "entries": [
               {
                 "data": {
-                  "Name": "floral_flair:black_hyacinth"
-                },
-                "weight": 1
-              },
-              {
-                "data": {
-                  "Name": "floral_flair:pink_hyacinth"
-                },
-                "weight": 2
-              },
-              {
-                "data": {
                   "Name": "floral_flair:yellow_hyacinth"
                 },
                 "weight": 2
@@ -29,6 +17,18 @@
               {
                 "data": {
                   "Name": "floral_flair:blue_hyacinth"
+                },
+                "weight": 2
+              },
+              {
+                "data": {
+                  "Name": "floral_flair:black_hyacinth"
+                },
+                "weight": 1
+              },
+              {
+                "data": {
+                  "Name": "floral_flair:pink_hyacinth"
                 },
                 "weight": 2
               }

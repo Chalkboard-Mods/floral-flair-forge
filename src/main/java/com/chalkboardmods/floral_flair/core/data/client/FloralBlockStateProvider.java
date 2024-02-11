@@ -70,7 +70,7 @@ public class FloralBlockStateProvider extends BlockStateProvider {
         pottedFlowerBlock(FloralBlocks.POTTED_WHITE_COSMOS);
         pottedFlowerBlock(FloralBlocks.POTTED_PINK_COSMOS);
         pottedFlowerBlock(FloralBlocks.POTTED_CHOCOLATE_COSMOS);
-        pottedFlowerBlock(FloralBlocks.POTTED_MUSCARI);
+        pottedMuscariBlock();
         pottedLunulaBlock();
     }
 
@@ -167,5 +167,13 @@ public class FloralBlockStateProvider extends BlockStateProvider {
                     .modelFile(file)
                     .build();
         });
+    }
+
+    public void pottedMuscariBlock() {
+        FlowerPotBlock block = (FlowerPotBlock) FloralBlocks.POTTED_MUSCARI.get();
+
+        ModelFile file = models().withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(), "minecraft:block/flower_pot_cross").texture("plant", new ResourceLocation(FloralFlair.MOD_ID, ModelProvider.BLOCK_FOLDER + "/" + ForgeRegistries.BLOCKS.getKey(block).getPath())).renderType("cutout");
+
+        simpleBlock(block, file);
     }
 }

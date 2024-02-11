@@ -13,6 +13,8 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -39,7 +41,7 @@ public class FloralRecipeProvider extends RecipeProvider {
         createDyeFromFlowerRecipe(FloralBlocks.FAIRY_BLOSSOM.get(), Items.MAGENTA_DYE, 2, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.JUNGLE_GEM.get(), Items.YELLOW_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.ROSE.get(), Items.RED_DYE, consumer);
-        createDyeFromFlowerRecipe(FloralBlocks.MUSCARI.get(), Items.CYAN_DYE, consumer);
+        createDyeFromFlowerRecipe(FloralBlocks.MUSCARI.get(), Items.BLUE_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.PURPUREUM.get(), Items.PINK_DYE, 2, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.SCILLA.get(), Items.LIGHT_BLUE_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.TWILIGHT_ORCHID.get(), Items.PURPLE_DYE, consumer);
@@ -51,7 +53,7 @@ public class FloralRecipeProvider extends RecipeProvider {
         createDyeFromFlowerRecipe(FloralBlocks.YELLOW_HYACINTH.get(), Items.YELLOW_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.BLACK_HYACINTH.get(), Items.BLACK_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.THORN_BLOSSOM.get(), Items.BROWN_DYE, 2, consumer);
-        createDyeFromFlowerRecipe(FloralBlocks.STONETTE.get(), Items.GRAY_DYE, consumer);
+        createDyeFromFlowerRecipe(FloralBlocks.STONETTE.get(), Items.AMETHYST_SHARD, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.ORANGE_COSMOS.get(), Items.ORANGE_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.WHITE_COSMOS.get(), Items.WHITE_DYE, consumer);
         createDyeFromFlowerRecipe(FloralBlocks.PINK_COSMOS.get(), Items.PINK_DYE, consumer);
@@ -72,13 +74,13 @@ public class FloralRecipeProvider extends RecipeProvider {
         createDyeFromCuttingFlowersRecipe(FloralBlocks.BLUE_HYACINTH.get(), Items.BLUE_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.YELLOW_HYACINTH.get(), Items.YELLOW_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.BLACK_HYACINTH.get(), Items.BLACK_DYE, consumer);
-        createDyeFromCuttingFlowersRecipe(FloralBlocks.STONETTE.get(), Items.GRAY_DYE, consumer);
+        createDyeFromCuttingFlowersRecipe(FloralBlocks.STONETTE.get(), Items.AMETHYST_SHARD, ForgeTags.TOOLS_PICKAXES, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.ORANGE_COSMOS.get(), Items.ORANGE_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.WHITE_COSMOS.get(), Items.WHITE_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.PINK_COSMOS.get(), Items.PINK_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.CHOCOLATE_COSMOS.get(), Items.BROWN_DYE, consumer);
         createDyeFromCuttingFlowersRecipe(FloralBlocks.LUNULA.get(), Items.BLUE_DYE, consumer);
-        createDyeFromCuttingFlowersRecipe(FloralBlocks.MUSCARI.get(), Items.CYAN_DYE, consumer);
+        createDyeFromCuttingFlowersRecipe(FloralBlocks.MUSCARI.get(), Items.BLUE_DYE, consumer);
 
         createDyeFromMillingFlowerRecipe(FloralBlocks.FOXNIP, (transform) -> transform.duration(50).output(Items.ORANGE_DYE).output(Items.WHITE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
         createDyeFromMillingFlowerRecipe(FloralBlocks.FROSTED_FOXNIP, (transform) -> transform.duration(50).output(Items.WHITE_DYE).output(Items.LIGHT_BLUE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
@@ -98,7 +100,7 @@ public class FloralRecipeProvider extends RecipeProvider {
         createDyeFromMillingFlowerRecipe(FloralBlocks.YELLOW_HYACINTH, (transform) -> transform.duration(50).output(Items.YELLOW_DYE).output(0.05F, Items.GREEN_DYE), consumer);
         createDyeFromMillingFlowerRecipe(FloralBlocks.BLACK_HYACINTH, (transform) -> transform.duration(50).output(Items.BLACK_DYE).output(0.05F, Items.GREEN_DYE), consumer);
         createDyeFromMillingFlowerRecipe(FloralBlocks.THORN_BLOSSOM, (transform) -> transform.duration(100).output(Items.BROWN_DYE, 2).output(0.25F, Items.BROWN_DYE).output(0.05F, Items.GREEN_DYE), consumer);
-        createDyeFromMillingFlowerRecipe(FloralBlocks.STONETTE, (transform) -> transform.duration(100).output(Items.GRAY_DYE), consumer);
+        createDyeFromMillingFlowerRecipe(FloralBlocks.STONETTE, (transform) -> transform.duration(100).output(Items.AMETHYST_SHARD), consumer);
         createDyeFromMillingFlowerRecipe(FloralBlocks.ORANGE_COSMOS, (transform) -> transform.duration(50).output(Items.ORANGE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
         createDyeFromMillingFlowerRecipe(FloralBlocks.WHITE_COSMOS, (transform) -> transform.duration(50).output(Items.WHITE_DYE).output(0.05F, Items.GREEN_DYE), consumer);
         createDyeFromMillingFlowerRecipe(FloralBlocks.PINK_COSMOS, (transform) -> transform.duration(50).output(Items.PINK_DYE).output(0.05F, Items.GREEN_DYE), consumer);
@@ -114,11 +116,15 @@ public class FloralRecipeProvider extends RecipeProvider {
         createDyeFromFlowerRecipe(flower, dye, 1, consumer);
     }
 
-    private static void createDyeFromCuttingFlowersRecipe(ItemLike flower, ItemLike dye, Consumer<FinishedRecipe> consumer) {
+    private static void createDyeFromCuttingFlowersRecipe(ItemLike flower, ItemLike dye, TagKey<Item> toolTag, Consumer<FinishedRecipe> consumer) {
         ConditionalRecipe.builder()
                 .addCondition(new ModLoadedCondition("farmersdelight"))
-                .addRecipe(consumer1 -> CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(flower), Ingredient.of(ForgeTags.TOOLS_KNIVES), dye, 2).build(consumer1))
+                .addRecipe(consumer1 -> CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(flower), Ingredient.of(toolTag), dye, 2).build(consumer1))
                 .build(consumer, new ResourceLocation(FloralFlair.MOD_ID, "cutting/" + getItemName(dye) + "_from_" + getItemName(flower)));
+    }
+
+    private static void createDyeFromCuttingFlowersRecipe(ItemLike flower, ItemLike dye, Consumer<FinishedRecipe> consumer) {
+        createDyeFromCuttingFlowersRecipe(flower, dye, ForgeTags.TOOLS_KNIVES, consumer);
     }
 
     private static void createDyeFromMillingFlowerRecipe(Supplier<Block> flower, UnaryOperator<ProcessingRecipeBuilder<MillingRecipe>> transform, Consumer<FinishedRecipe> consumer) {

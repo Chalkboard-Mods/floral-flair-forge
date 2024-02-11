@@ -12,17 +12,17 @@
         "type": "farmersdelight:cutting",
         "ingredients": [
           {
-            "item": "floral_flair:muscari"
+            "item": "floral_flair:stonette"
           }
         ],
         "result": [
           {
             "count": 2,
-            "item": "minecraft:cyan_dye"
+            "item": "minecraft:amethyst_shard"
           }
         ],
         "tool": {
-          "tag": "forge:tools/knives"
+          "tag": "forge:tools/pickaxes"
         }
       }
     }

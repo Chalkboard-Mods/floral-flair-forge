@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_muscari": {
+    "has_stonette": {
       "conditions": {
         "items": [
           {
             "items": [
-              "floral_flair:muscari"
+              "floral_flair:stonette"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floral_flair:crafting/cyan_dye_from_muscari"
+        "recipe": "floral_flair:crafting/amethyst_shard_from_stonette"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_muscari",
+      "has_stonette",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "floral_flair:crafting/cyan_dye_from_muscari"
+      "floral_flair:crafting/amethyst_shard_from_stonette"
     ]
   },
   "sends_telemetry_event": false

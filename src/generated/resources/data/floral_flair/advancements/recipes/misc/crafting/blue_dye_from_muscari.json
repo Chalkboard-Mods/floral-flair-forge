@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stonette": {
+    "has_muscari": {
       "conditions": {
         "items": [
           {
             "items": [
-              "floral_flair:stonette"
+              "floral_flair:muscari"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floral_flair:crafting/gray_dye_from_stonette"
+        "recipe": "floral_flair:crafting/blue_dye_from_muscari"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_stonette",
+      "has_muscari",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "floral_flair:crafting/gray_dye_from_stonette"
+      "floral_flair:crafting/blue_dye_from_muscari"
     ]
   },
   "sends_telemetry_event": false

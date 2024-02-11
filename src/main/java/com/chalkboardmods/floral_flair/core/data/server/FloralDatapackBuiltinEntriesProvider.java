@@ -72,7 +72,7 @@ public class FloralDatapackBuiltinEntriesProvider extends DatapackBuiltinEntries
     }
 
     public static void bootstrapPlacedFeatures(BootstapContext<PlacedFeature> context) {
-        rarityPlaced("flower_foxnip", 8, context);
+        rarityPlaced("flower_foxnip", 10, context);
         rarityPlaced("flower_frosted_foxnip", 10, context);
         rarityPlaced("flower_pulse_petal", 8, context);
         rarityPlaced("flower_fairy_blossom", 10, context);
@@ -89,7 +89,7 @@ public class FloralDatapackBuiltinEntriesProvider extends DatapackBuiltinEntries
         specificPlaced("flower_stonette", context, CountPlacement.of(3), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome());
         rarityPlaced("flower_lunula", 8, context);
         rarityPlaced("flower_cosmos", 12, context);
-        specificPlaced("flower_thorn_blossom", context, CountPlacement.of(4), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome());
+        specificPlaced("flower_thorn_blossom", context, CountPlacement.of(8), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome());
     }
 
     private static void bootstrapBiomeModifiers(BootstapContext<BiomeModifier> context) {

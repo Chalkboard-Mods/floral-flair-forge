@@ -2,6 +2,6 @@
   "parent": "minecraft:block/flower_pot_cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "plant": "floral_flair:block/muscari"
+    "plant": "floral_flair:block/potted_muscari"
   }
 }
