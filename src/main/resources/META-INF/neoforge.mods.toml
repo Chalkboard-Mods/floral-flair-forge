@@ -1,0 +1,38 @@
+modLoader="javafml"
+
+loaderVersion="${loader_version_range}"
+
+license="${mod_license}"
+
+# A URL to refer people to when problems occur with this mod
+#issueTrackerURL="https://github.com/Chalkboard-Mods/floral-flair-forge/issues"
+
+[[mods]]
+
+modId="${mod_id}" #mandatory
+version="${mod_version}"
+displayName="${mod_name}" #mandatory
+#updateJSONURL="https://api.modrinth.com/updates/floral-flair/forge_updates.json?neoforge=only"
+#displayURL="https://modrinth.com/mod/floral-flair/"
+#logoFile="floral.png"
+description='''${mod_description}'''
+
+[[mixins]]
+config="${mod_id}.mixins.json"
+
+[[accessTransformers]]
+file="META-INF/accesstransformer.cfg"
+
+[[dependencies.${mod_id}]] #optional
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
